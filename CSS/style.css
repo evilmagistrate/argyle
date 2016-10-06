@@ -1,3 +1,6 @@
+html {
+  max-width: 1920px; }
+
 body {
   background-color: #282828;
   font-family: Rokkitt, "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -7,6 +10,15 @@ body {
   margin: 0; }
 
 header {
+  position: relative;
+  clear: both;
+  width: 100%;
+  margin-left: 10%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   font-family: Amiko, Arial, sans-serif;
   color: #ffffff;
   text-transform: uppercase; }
@@ -15,9 +27,19 @@ header {
   header nav {
     font-size: 1.2em; }
     header nav li {
-      list-style: none; }
+      list-style: none;
+      display: inline-block; }
     header nav a {
       text-decoration: none;
       color: #ffffff; }
+  @media only screen and (max-width: 736px) {
+    header {
+      background-color: pink;
+      margin: 6% 0 0 6%;
+      line-height: 40px; }
+      header #logo {
+        font-size: 1.8em; }
+        header #logo nav {
+          font-size: 2em; } }
 
 /*# sourceMappingURL=style.css.map */
