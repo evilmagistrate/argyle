@@ -1,8 +1,8 @@
 // variables
 
 $dark: #282828;
-$light: #626f7f;
-$white: #ffffff;
+$lessdark: #626f7f;
+$bright: #ffffff;
 
 $font-serif: Rokkitt, "Palatino Linotype", "Book Antiqua", Palatino, serif;
 $font-sans: Amiko, Arial, sans-serif;
@@ -12,9 +12,7 @@ $width-small: 667px;
 $width-medium: 1024px;
 $width-large: 1366px;
 
-
 // mixins
-
 
 @mixin responsive($width) {
   @if $width == wide-screens {
@@ -35,17 +33,53 @@ $width-large: 1366px;
   }
 }
 
+// class styles
+
+.active {
+
+}
+
 
 // main content
-
-
 
 body {
   background-color: $dark;
   font: {
     family: $font-serif;
-    size: 20pt;
+    size: 14pt;
   }
+  font-weight: 600;
   width: 100%;
   margin: 0;
 }
+
+header {
+  font: {
+    family: $font-sans;
+  }
+  color: $bright;
+  text-transform: uppercase;
+
+  & #logo {
+    font: {
+      size: 3em;
+    }
+  }
+
+  & nav {
+    font: {
+      size: 1.2em;
+    }
+
+    & li {
+      list-style: none;
+    }
+
+    & a {
+      text-decoration: none;
+      color: $bright;
+    }
+  }
+}
+
+
