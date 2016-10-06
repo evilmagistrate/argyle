@@ -9,7 +9,7 @@ $font-serif: Rokkitt, "Palatino Linotype", "Book Antiqua", Palatino, serif;
 $font-sans: Amiko, Arial, sans-serif;
 
 $width-tiny: 320px;
-$width-smaller: 420px;
+$width-smaller: 568px;
 $width-small: 736px;
 $width-medium: 1024px;
 $width-large: 1366px;
@@ -78,20 +78,21 @@ body {
 // header & nav
 
 
-header {
+#banner {
 
   position: relative;
   clear: both;
-  width: 100%;
   margin-left: 10%;
-  @include flex-box;
-
 
   font: {
     family: $font-sans;
   }
   color: $bright;
   text-transform: uppercase;
+
+  header {
+    position: relative;
+  }
 
   & #logo {
     font: {
@@ -103,11 +104,7 @@ header {
     font: {
       size: 1.2em;
     }
-
-    & li {
-      list-style: none;
-      display: inline-block;
-    }
+    margin-right: 10%;
 
     & a {
       text-decoration: none;
@@ -116,23 +113,68 @@ header {
   }
 
   @include responsive(small-screens) {
-    background-color: pink;
-    margin: 6% 0 0 6%;
-    line-height: 40px;
+    margin: 2% 0 0 2%;
+    width: 340px;
 
+    & #logo {
+      font: {
+        size: 2.1em;
+      }
+      line-height: 1em;
+
+    }
+
+    & nav {
+      margin-top: -.25em;
+
+      & #contact_link {
+        float: right;
+      }
+    }
+  }
+
+  @include responsive(smaller-screens) {
+    margin: 6% 0 0 6%;
+    @include flex-box;
+    width: 100%;
 
     & #logo {
         font: {
           size: 1.8em;
-      }
-
-      & nav {
-        font: {
-          size: 2em;
         }
+      line-height: 1em;
+
+      & #logo_ralph {
+        font-size: 1.225em;
+      }
+    }
+
+    & nav {
+      text-align: right;
+      margin-top: 2.1%;
+
+      & #contact_link {
+        position: static;
       }
     }
   }
-}
 
+  @include responsive(tiny-screens) {
+
+    & #logo {
+      font-size: 1.5em;
+      line-height: 1em;
+
+      & #logo_ralph {
+        font-size: 1.225em;
+      }
+    }
+
+    & nav {
+      font-size: 1em;
+      text-align: right;
+      margin-top: 1.3%;
+    }
+  }
+}
 
