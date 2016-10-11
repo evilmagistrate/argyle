@@ -113,7 +113,7 @@ body {
   }
 
   @include responsive(small-screens) {
-    margin: 2% 0 0 2%;
+    margin: 2% 0 0 5.6%;
     width: 340px;
 
     & #logo {
@@ -136,7 +136,7 @@ body {
   @include responsive(smaller-screens) {
     margin: 5% 0 0 5%;
     @include flex-box;
-    width: 100%;
+    max-width: 100%;
 
     & #logo {
         font: {
@@ -152,12 +152,13 @@ body {
     & nav {
       text-align: right;
       margin-top: 2.1%;
+      margin-right: 2.6%;
+    }
 
       & #contact_link {
         position: static;
       }
     }
-  }
 
   @include responsive(tiny-screens) {
 
@@ -174,6 +175,7 @@ body {
       font-size: 1em;
       text-align: right;
       margin-top: 1.3%;
+      margin-right: 10%;
     }
   }
 }
@@ -182,14 +184,42 @@ body {
 // wrapper
 
 div#wrapper {
-  opacity: .9;
-  width: 66%;
   height: 100%;
-  margin: auto;
+  margin: 0 auto;
+  max-width: 100%;
 
   @include responsive(small-screens) {
-    margin-top: 2%;
-    width: 100%;
+    margin: 2% 4% 4% 4%;
+  }
+
+  @include responsive(tiny-screens) {
+    margin: 2% -2%;
   }
 }
 
+
+// spotlight
+
+
+// portfolio_gallery
+
+.portfolio_gallery {
+}
+
+.showcard {
+
+  float: left;
+  margin: 2%;
+  width: 42%;
+
+  @include responsive(smaller-screens) {
+   width: 100%;
+  }
+
+}
+
+.thumbnail {
+
+    float: left;
+    max-width: 100%;
+}
