@@ -1,7 +1,8 @@
 
 $(document).ready(function(){
+
     $(' TODO ').slick({
-});
+    });
 
     $('.slider-for').slick({
         slidesToShow: 1,
@@ -10,6 +11,7 @@ $(document).ready(function(){
         fade: true,
         asNavFor: '.slider-nav'
     });
+
     $('.slider-nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -18,4 +20,5 @@ $(document).ready(function(){
         centerMode: true,
         focusOnSelect: true
     });
+
 });

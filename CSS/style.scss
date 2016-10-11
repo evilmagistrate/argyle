@@ -62,6 +62,7 @@ $width-large: 1366px;
 html {
   max-width: 1920px;
 }
+
 body {
 
   background-color: $dark;
@@ -82,7 +83,9 @@ body {
 
   position: relative;
   clear: both;
-  margin-left: 10%;
+  margin-left: 10.3%;
+  margin-top: 2em;
+  width: 600px;
 
   font: {
     family: $font-sans;
@@ -96,7 +99,7 @@ body {
 
   & #logo {
     font: {
-      size: 3em;
+      size: 3.9em;
     }
   }
 
@@ -104,28 +107,67 @@ body {
     font: {
       size: 1.2em;
     }
-    margin-right: 10%;
+    margin: -.25em 1.2em 0 .2em;
 
     & a {
       text-decoration: none;
       color: $bright;
     }
+
+    & #contact_link {
+      float: right;
+    }
   }
 
-  @include responsive(small-screens) {
-    margin: 2% 0 0 5.6%;
-    width: 340px;
+  @include responsive(wide-screens) {
+    & #logo {
+      font: {
+        size: 3.9em;
+      }
+    }
+  }
+
+  @include responsive(medium-screens) {
+    margin: 4% 0 0 8.5%;
+    width: 440px;
 
     & #logo {
+
+      font: {
+        size: 2.8em;
+      }
+
+      line-height: 1em;
+    }
+
+    & nav {
+      margin-top: -.25em;
+      margin-left: .1em;
+      margin-right: 7%;
+    }
+
+  }
+
+
+  @include responsive(small-screens) {
+    margin: 2% 0 0 4.2%;
+    width: 334px;
+
+    & #logo {
+
       font: {
         size: 2.1em;
       }
+
       line-height: 1em;
+      margin-left: .1em;
+      margin-right: 0;
 
     }
 
     & nav {
       margin-top: -.25em;
+      margin-left: .2em;
 
       & #contact_link {
         float: right;
@@ -134,14 +176,16 @@ body {
   }
 
   @include responsive(smaller-screens) {
+
     margin: 5% 0 0 5%;
     @include flex-box;
     max-width: 100%;
+    width: 340px;
 
     & #logo {
-        font: {
-          size: 1.8em;
-        }
+      font: {
+        size: 1.8em;
+      }
       line-height: 1em;
 
       & #logo_ralph {
@@ -152,13 +196,13 @@ body {
     & nav {
       text-align: right;
       margin-top: 2.1%;
-      margin-right: 1%;
+      margin-right: 2%;
     }
 
-      & #contact_link {
-        position: static;
-      }
+    & #contact_link {
+      position: static;
     }
+  }
 
   @include responsive(tiny-screens) {
 
@@ -189,6 +233,10 @@ div#wrapper {
   max-width: 100%;
 
   @include responsive(small-screens) {
+    margin-left: 4%;
+  }
+
+  @include responsive(smaller-screens) {
     margin: 2% 4% 4% 4%;
   }
 
@@ -205,14 +253,22 @@ div#wrapper {
 
 #portfolio_gallery {
 
-  @include responsive(wide-screens) {
-    max-width: 60%;
-    margin-left: 10%;
+  max-width: 1174px;
+  margin-left: 10%;
+
+  @include responsive(medium-screens) {
+    max-width: 100%;
+    margin-left: 8%;
   }
 
   @include responsive(small-screens) {
+    max-width: 100%;
     margin-left: 0;
+  }
+
+  @include responsive(smaller-screens) {
     max-width: 96%;
+    margin-left: 0;
   }
 
   @include responsive(tiny-screens) {
@@ -223,20 +279,73 @@ div#wrapper {
 .showcard {
 
   float: left;
-  margin: 2%;
+  margin: 1%;
+  width: 48%;
 
-  @include responsive(small-screens) {
-    width: 42%;
+  @include responsive(medium-screens) {
+    width: 46%;
   }
 
   @include responsive(smaller-screens) {
-   width: 100%;
+    margin: 2%;
+    width: 100%;
   }
 
 }
 
 .thumbnail {
 
-    float: left;
-    max-width: 100%;
+  float: left;
+  max-width: 100%;
+}
+
+// footer
+
+footer {
+
+  background-color: $dark;
+  z-index: 1;
+  height: 4em;
+  width: 100%;
+  position: fixed;
+  bottom: -1em;
+
+  @include responsive(medium-screens) {
+    position: static;
+  }
+
+}
+
+#copyright {
+
+  font: {
+    family: $font-sans;
+  }
+  font-weight: 400;
+  color: $bright;
+  float: right;
+  padding: 1% 12% 2%;
+
+  @include responsive(wide-screens) {
+    font-size: .8em;
+  }
+
+  @include responsive(medium-screens) {
+    font-size: .7em;
+    padding: 1% 5% 2%;
+  }
+
+  @include responsive(small-screens) {
+    font-size: .6em;
+    padding: 1% 6% 2%;
+  }
+
+  @include responsive(smaller-screens) {
+    font-size: .6em;
+    padding: 1% 7% 2%;
+  }
+
+  .big {
+    font-size: larger;
+  }
 }
