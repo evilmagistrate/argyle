@@ -9,7 +9,7 @@ $font-serif: Rokkitt, "Palatino Linotype", "Book Antiqua", Palatino, serif;
 $font-sans: Amiko, Arial, sans-serif;
 
 $width-tiny: 320px;
-$width-smaller: 568px;
+$width-smaller: 567px;
 $width-small: 736px;
 $width-medium: 1024px;
 $width-large: 1366px;
@@ -152,7 +152,7 @@ body {
     & nav {
       text-align: right;
       margin-top: 2.1%;
-      margin-right: 2.6%;
+      margin-right: 1%;
     }
 
       & #contact_link {
@@ -203,14 +203,31 @@ div#wrapper {
 
 // portfolio_gallery
 
-.portfolio_gallery {
+#portfolio_gallery {
+
+  @include responsive(wide-screens) {
+    max-width: 60%;
+    margin-left: 10%;
+  }
+
+  @include responsive(small-screens) {
+    margin-left: 0;
+    max-width: 96%;
+  }
+
+  @include responsive(tiny-screens) {
+    max-width: 100%;
+  }
 }
 
 .showcard {
 
   float: left;
   margin: 2%;
-  width: 42%;
+
+  @include responsive(small-screens) {
+    width: 42%;
+  }
 
   @include responsive(smaller-screens) {
    width: 100%;
