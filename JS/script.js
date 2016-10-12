@@ -1,6 +1,10 @@
 
 $(document).ready(function(){
 
+
+    //slick carousel api
+
+
     $(' TODO ').slick({
     });
 
@@ -21,4 +25,15 @@ $(document).ready(function(){
         focusOnSelect: true
     });
 
+
+    //darkens images on hover
+
+    $('.thumbnail')
+        .mouseover(function() {
+            $('.thumbnail').stop().fadeTo(400,.5);
+            $(this).stop().fadeTo(0,1);
+        })
+        .mouseout(function() {
+            $('.thumbnail').fadeTo(200, 1);
+            });
 });

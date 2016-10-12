@@ -229,7 +229,6 @@ body {
 
 div#wrapper {
   height: 100%;
-  margin: 0 auto;
   max-width: 100%;
   margin-left: 4%;
 
@@ -251,7 +250,11 @@ div#wrapper {
 
 #portfolio_gallery {
 
-  max-width: 1174px;
+  z-index: 2;
+
+  @include responsive(wide-screens) {
+    max-width: 1224px;
+  }
 
   @include responsive(medium-screens) {
     max-width: 100%;
@@ -274,7 +277,11 @@ div#wrapper {
 
   float: left;
   margin: 1%;
-  width: 48%;
+  width: 30%;
+
+  @include responsive(wide-screens) {
+    width: 46%;
+  }
 
   @include responsive(medium-screens) {
     width: 46%;
@@ -348,7 +355,10 @@ footer {
 
 }
 
-
 #banner nav a:hover {
   color: $lessdark;
+}
+
+img.thumbnail:hover {
+  box-shadow: .5em .5em 1em #000;
 }

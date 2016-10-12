@@ -98,7 +98,6 @@ body {
 
 div#wrapper {
   height: 100%;
-  margin: 0 auto;
   max-width: 100%;
   margin-left: 4%; }
   @media only screen and (max-width: 567px) {
@@ -109,7 +108,10 @@ div#wrapper {
       margin: 2% -2%; } }
 
 #portfolio_gallery {
-  max-width: 1174px; }
+  z-index: 2; }
+  @media only screen and (max-width: 1366px) {
+    #portfolio_gallery {
+      max-width: 1224px; } }
   @media only screen and (max-width: 1024px) {
     #portfolio_gallery {
       max-width: 100%; } }
@@ -126,7 +128,10 @@ div#wrapper {
 .showcard {
   float: left;
   margin: 1%;
-  width: 48%; }
+  width: 30%; }
+  @media only screen and (max-width: 1366px) {
+    .showcard {
+      width: 46%; } }
   @media only screen and (max-width: 1024px) {
     .showcard {
       width: 46%; } }
@@ -173,5 +178,8 @@ footer {
 
 #banner nav a:hover {
   color: #626f7f; }
+
+img.thumbnail:hover {
+  box-shadow: .5em .5em 1em #000; }
 
 /*# sourceMappingURL=style.css.map */
