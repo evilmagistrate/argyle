@@ -49,13 +49,6 @@ $width-large: 1366px;
   display: flex;
 }
 
-// class styles
-
-
-.active {
-
-}
-
 
 // main content
 
@@ -72,7 +65,7 @@ body {
   }
   font-weight: 600;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
 }
 
 
@@ -83,9 +76,11 @@ body {
 
   position: relative;
   clear: both;
-  margin-left: 10.3%;
+  margin-left: 4.4%;
   margin-top: 2em;
+  margin-bottom: 1em;
   width: 600px;
+  z-index: 1;
 
   font: {
     family: $font-sans;
@@ -101,13 +96,14 @@ body {
     font: {
       size: 3.9em;
     }
+    height: 1em;
   }
 
   & nav {
     font: {
       size: 1.2em;
     }
-    margin: -1em 1.2em 0 .2em;
+    margin: .25em 1.2em 0 .2em;
 
     & a {
       text-decoration: none;
@@ -115,7 +111,7 @@ body {
     }
 
     & #contact_link {
-      float: right;
+      margin-left: 320px;
     }
   }
 
@@ -128,7 +124,7 @@ body {
   }
 
   @include responsive(medium-screens) {
-    margin: 4% 0 0 8.5%;
+    margin: 4% 0 0 4.6%;
     width: 440px;
 
     & #logo {
@@ -144,6 +140,10 @@ body {
       margin-top: -.25em;
       margin-left: .1em;
       margin-right: 7%;
+
+      & #contact_link {
+        margin-left: 156px;
+      }
     }
 
   }
@@ -170,7 +170,7 @@ body {
       margin-left: .2em;
 
       & #contact_link {
-        float: right;
+        margin-left: 18%;
       }
     }
   }
@@ -231,10 +231,8 @@ div#wrapper {
   height: 100%;
   margin: 0 auto;
   max-width: 100%;
+  margin-left: 4%;
 
-  @include responsive(small-screens) {
-    margin-left: 4%;
-  }
 
   @include responsive(smaller-screens) {
     margin: 2% 4% 4% 4%;
@@ -254,21 +252,17 @@ div#wrapper {
 #portfolio_gallery {
 
   max-width: 1174px;
-  margin-left: 10%;
 
   @include responsive(medium-screens) {
     max-width: 100%;
-    margin-left: 8%;
   }
 
   @include responsive(small-screens) {
     max-width: 100%;
-    margin-left: 0;
   }
 
   @include responsive(smaller-screens) {
     max-width: 96%;
-    margin-left: 0;
   }
 
   @include responsive(tiny-screens) {
@@ -325,13 +319,9 @@ footer {
   color: $bright;
   float: right;
   padding: 1% 12% 2%;
-
-  @include responsive(wide-screens) {
-    font-size: .8em;
-  }
+  font-size: .8em;
 
   @include responsive(medium-screens) {
-    font-size: .7em;
     padding: 1% 5% 2%;
   }
 
@@ -348,4 +338,17 @@ footer {
   .big {
     font-size: larger;
   }
+}
+
+
+// class styles, psuedo-classes
+
+
+.active {
+
+}
+
+
+#banner nav a:hover {
+  color: $lessdark;
 }

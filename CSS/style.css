@@ -7,35 +7,38 @@ body {
   font-size: 14pt;
   font-weight: 600;
   width: 100%;
-  margin: 0; }
+  margin: 0 auto; }
 
 #banner {
   position: relative;
   clear: both;
-  margin-left: 10.3%;
+  margin-left: 4.4%;
   margin-top: 2em;
+  margin-bottom: 1em;
   width: 600px;
+  z-index: 1;
   font-family: Amiko, Arial, sans-serif;
   color: #ffffff;
   text-transform: uppercase; }
   #banner header {
     position: relative; }
   #banner #logo {
-    font-size: 3.9em; }
+    font-size: 3.9em;
+    height: 1em; }
   #banner nav {
     font-size: 1.2em;
-    margin: -1em 1.2em 0 .2em; }
+    margin: .25em 1.2em 0 .2em; }
     #banner nav a {
       text-decoration: none;
       color: #ffffff; }
     #banner nav #contact_link {
-      float: right; }
+      margin-left: 320px; }
   @media only screen and (max-width: 1366px) {
     #banner #logo {
       font-size: 3.9em; } }
   @media only screen and (max-width: 1024px) {
     #banner {
-      margin: 4% 0 0 8.5%;
+      margin: 4% 0 0 4.6%;
       width: 440px; }
       #banner #logo {
         font-size: 2.8em;
@@ -43,7 +46,9 @@ body {
       #banner nav {
         margin-top: -.25em;
         margin-left: .1em;
-        margin-right: 7%; } }
+        margin-right: 7%; }
+        #banner nav #contact_link {
+          margin-left: 156px; } }
   @media only screen and (max-width: 736px) {
     #banner {
       margin: 2% 0 0 4.2%;
@@ -57,7 +62,7 @@ body {
         margin-top: -.25em;
         margin-left: .2em; }
         #banner nav #contact_link {
-          float: right; } }
+          margin-left: 18%; } }
   @media only screen and (max-width: 567px) {
     #banner {
       margin: 5% 0 0 5%;
@@ -94,10 +99,8 @@ body {
 div#wrapper {
   height: 100%;
   margin: 0 auto;
-  max-width: 100%; }
-  @media only screen and (max-width: 736px) {
-    div#wrapper {
-      margin-left: 4%; } }
+  max-width: 100%;
+  margin-left: 4%; }
   @media only screen and (max-width: 567px) {
     div#wrapper {
       margin: 2% 4% 4% 4%; } }
@@ -106,20 +109,16 @@ div#wrapper {
       margin: 2% -2%; } }
 
 #portfolio_gallery {
-  max-width: 1174px;
-  margin-left: 10%; }
+  max-width: 1174px; }
   @media only screen and (max-width: 1024px) {
     #portfolio_gallery {
-      max-width: 100%;
-      margin-left: 8%; } }
+      max-width: 100%; } }
   @media only screen and (max-width: 736px) {
     #portfolio_gallery {
-      max-width: 100%;
-      margin-left: 0; } }
+      max-width: 100%; } }
   @media only screen and (max-width: 567px) {
     #portfolio_gallery {
-      max-width: 96%;
-      margin-left: 0; } }
+      max-width: 96%; } }
   @media only screen and (max-width: 320px) {
     #portfolio_gallery {
       max-width: 100%; } }
@@ -156,13 +155,10 @@ footer {
   font-weight: 400;
   color: #ffffff;
   float: right;
-  padding: 1% 12% 2%; }
-  @media only screen and (max-width: 1366px) {
-    #copyright {
-      font-size: .8em; } }
+  padding: 1% 12% 2%;
+  font-size: .8em; }
   @media only screen and (max-width: 1024px) {
     #copyright {
-      font-size: .7em;
       padding: 1% 5% 2%; } }
   @media only screen and (max-width: 736px) {
     #copyright {
@@ -174,5 +170,8 @@ footer {
       padding: 1% 7% 2%; } }
   #copyright .big {
     font-size: larger; }
+
+#banner nav a:hover {
+  color: #626f7f; }
 
 /*# sourceMappingURL=style.css.map */
