@@ -26,14 +26,27 @@ $(document).ready(function(){
     });
 
 
+
+
+
+
+
+
+
+
     //darkens images on hover
 
-    $('.thumbnail')
-        .mouseover(function() {
-            $('.thumbnail').stop().fadeTo(400,.5);
-            $(this).stop().fadeTo(0,1);
-        })
-        .mouseout(function() {
-            $('.thumbnail').fadeTo(200, 1);
-            });
+    //$('.thumbnail')
+    //    .mouseover(function() {
+    //        $('.thumbnail').stop().fadeTo(400,.5);
+    //        $(this).stop().fadeTo(0,1);
+    //    })
+    //    .mouseout(function() {
+    //        $('.thumbnail').fadeTo(200, 1);
+    //        });
+
+
+
+
+
 });
