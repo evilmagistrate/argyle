@@ -53,7 +53,7 @@ $width-large: 1366px;
 // main content
 
 html {
-  max-width: 1920px;
+  max-width: 2556px;
 }
 
 body {
@@ -79,7 +79,7 @@ body {
   margin-left: 4.4%;
   margin-top: 2em;
   margin-bottom: 1em;
-  width: 600px;
+  width: 680px;
   z-index: 1;
 
   font: {
@@ -94,7 +94,7 @@ body {
 
   & #logo {
     font: {
-      size: 3.9em;
+      size: 4.5em;
     }
     height: 1em;
   }
@@ -115,6 +115,8 @@ body {
   }
 
   @include responsive(wide-screens) {
+    width: 600px;
+
     & #logo {
       font: {
         size: 3.9em;
@@ -143,7 +145,6 @@ body {
     }
 
   }
-
 
   @include responsive(small-screens) {
     margin: 2% 0 0 4.2%;
@@ -217,6 +218,9 @@ div#wrapper {
   max-width: 100%;
   margin-left: 4%;
 
+  @include responsive(wide-screens) {
+    margin: 2% 4% 4% 4%;
+  }
 
   @include responsive(smaller-screens) {
     margin: 2% 4% 4% 4%;
@@ -236,18 +240,7 @@ div#wrapper {
 #portfolio_gallery {
 
   z-index: 2;
-
-  @include responsive(wide-screens) {
-    max-width: 1224px;
-  }
-
-  @include responsive(medium-screens) {
-    max-width: 100%;
-  }
-
-  @include responsive(small-screens) {
-    max-width: 100%;
-  }
+  max-width: 100%;
 
   @include responsive(smaller-screens) {
     max-width: 96%;
@@ -262,9 +255,9 @@ div#wrapper {
 
   float: left;
   margin: 1%;
-  width: 31%;
 
   @include responsive(wide-screens) {
+    max-width: 100%;
     width: 46%;
   }
 
@@ -289,17 +282,48 @@ div#wrapper {
 
 footer {
 
+  @include flex-box;
+  justify-content: space-between;
   background-color: $dark;
   z-index: 1;
-  height: 4em;
   width: 100%;
   position: fixed;
   bottom: -1em;
 
-  @include responsive(medium-screens) {
+  @include responsive(small-screens) {
     position: static;
   }
 
+}
+
+#top_button {
+
+  font: {
+    family: $font-sans;
+  }
+  font-weight: 400;
+  color: $bright;
+  padding: 1% 0 0 5%;
+  font-size: .8em;
+  text-decoration: none;
+
+  @include responsive(wide-screens) {
+    padding: 1% 5% 2% 5%;
+  }
+
+  @include responsive(medium-screens) {
+    padding: 1% 5% 2%;
+  }
+
+  @include responsive(small-screens) {
+    font-size: .6em;
+    padding: 1% 0 0 5%;
+  }
+
+  @include responsive(smaller-screens) {
+    font-size: .6em;
+    padding: 1% 0 0 2%;
+  }
 }
 
 #copyright {
@@ -309,22 +333,26 @@ footer {
   }
   font-weight: 400;
   color: $bright;
-  float: right;
-  padding: 1% 12% 2%;
+  padding: 1% 9% 2% 0;
   font-size: .8em;
 
   @include responsive(medium-screens) {
-    padding: 1% 5% 2%;
+    padding: 1% 10% 2%;
   }
 
   @include responsive(small-screens) {
     font-size: .6em;
-    padding: 1% 6% 2%;
+    padding: 1% 8.5% 2%;
   }
 
   @include responsive(smaller-screens) {
     font-size: .6em;
     padding: 1% 7% 2%;
+  }
+
+  @include responsive(tiny-screens) {
+    font-size: .6em;
+    padding: 1% 3% 2%;
   }
 
   .big {

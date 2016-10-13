@@ -2,7 +2,15 @@
 $(document).ready(function(){
 
 
-    //slick carousel api
+//return to top
+
+
+    $('#top_button').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 'fast');
+    });
+
+
+//slick carousel api
 
 
     $(' TODO ').slick({
@@ -26,15 +34,8 @@ $(document).ready(function(){
     });
 
 
+//darkens images on hover
 
-
-
-
-
-
-
-
-    //darkens images on hover
 
     //$('.thumbnail')
     //    .mouseover(function() {

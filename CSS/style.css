@@ -1,5 +1,5 @@
 html {
-  max-width: 1920px; }
+  max-width: 2556px; }
 
 body {
   background-color: #282828;
@@ -15,7 +15,7 @@ body {
   margin-left: 4.4%;
   margin-top: 2em;
   margin-bottom: 1em;
-  width: 600px;
+  width: 680px;
   z-index: 1;
   font-family: Amiko, Arial, sans-serif;
   color: #ffffff;
@@ -23,7 +23,7 @@ body {
   #banner header {
     position: relative; }
   #banner #logo {
-    font-size: 3.9em;
+    font-size: 4.5em;
     height: 1em; }
   #banner nav {
     font-size: 1.2em;
@@ -38,8 +38,10 @@ body {
       text-decoration: none;
       color: #ffffff; }
   @media only screen and (max-width: 1366px) {
-    #banner #logo {
-      font-size: 3.9em; } }
+    #banner {
+      width: 600px; }
+      #banner #logo {
+        font-size: 3.9em; } }
   @media only screen and (max-width: 1024px) {
     #banner {
       margin: 4% 0 0 4.6%;
@@ -89,6 +91,9 @@ div#wrapper {
   height: 100%;
   max-width: 100%;
   margin-left: 4%; }
+  @media only screen and (max-width: 1366px) {
+    div#wrapper {
+      margin: 2% 4% 4% 4%; } }
   @media only screen and (max-width: 567px) {
     div#wrapper {
       margin: 2% 4% 4% 4%; } }
@@ -97,16 +102,8 @@ div#wrapper {
       margin: 2% -2%; } }
 
 #portfolio_gallery {
-  z-index: 2; }
-  @media only screen and (max-width: 1366px) {
-    #portfolio_gallery {
-      max-width: 1224px; } }
-  @media only screen and (max-width: 1024px) {
-    #portfolio_gallery {
-      max-width: 100%; } }
-  @media only screen and (max-width: 736px) {
-    #portfolio_gallery {
-      max-width: 100%; } }
+  z-index: 2;
+  max-width: 100%; }
   @media only screen and (max-width: 567px) {
     #portfolio_gallery {
       max-width: 96%; } }
@@ -116,10 +113,10 @@ div#wrapper {
 
 .showcard {
   float: left;
-  margin: 1%;
-  width: 31%; }
+  margin: 1%; }
   @media only screen and (max-width: 1366px) {
     .showcard {
+      max-width: 100%;
       width: 46%; } }
   @media only screen and (max-width: 1024px) {
     .showcard {
@@ -134,34 +131,64 @@ div#wrapper {
   max-width: 100%; }
 
 footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
   background-color: #282828;
   z-index: 1;
-  height: 4em;
   width: 100%;
   position: fixed;
   bottom: -1em; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 736px) {
     footer {
       position: static; } }
+
+#top_button {
+  font-family: Amiko, Arial, sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 1% 0 0 5%;
+  font-size: .8em;
+  text-decoration: none; }
+  @media only screen and (max-width: 1366px) {
+    #top_button {
+      padding: 1% 5% 2% 5%; } }
+  @media only screen and (max-width: 1024px) {
+    #top_button {
+      padding: 1% 5% 2%; } }
+  @media only screen and (max-width: 736px) {
+    #top_button {
+      font-size: .6em;
+      padding: 1% 0 0 5%; } }
+  @media only screen and (max-width: 567px) {
+    #top_button {
+      font-size: .6em;
+      padding: 1% 0 0 2%; } }
 
 #copyright {
   font-family: Amiko, Arial, sans-serif;
   font-weight: 400;
   color: #ffffff;
-  float: right;
-  padding: 1% 12% 2%;
+  padding: 1% 9% 2% 0;
   font-size: .8em; }
   @media only screen and (max-width: 1024px) {
     #copyright {
-      padding: 1% 5% 2%; } }
+      padding: 1% 10% 2%; } }
   @media only screen and (max-width: 736px) {
     #copyright {
       font-size: .6em;
-      padding: 1% 6% 2%; } }
+      padding: 1% 8.5% 2%; } }
   @media only screen and (max-width: 567px) {
     #copyright {
       font-size: .6em;
       padding: 1% 7% 2%; } }
+  @media only screen and (max-width: 320px) {
+    #copyright {
+      font-size: .6em;
+      padding: 1% 3% 2%; } }
   #copyright .big {
     font-size: larger; }
 
