@@ -1,6 +1,25 @@
 
 $(document).ready(function(){
 
+    //$('#portfolio').addClass('current');
+
+
+    $('#contact_link').on('click', function () {
+
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        
+    });
+
+
+    //return to top
+
+
+    $('.showcard').click(function() {
+        event.preventDefault();
+        //$(this).hide();
+
+    });
 
 //return to top
 
@@ -47,8 +66,6 @@ $(document).ready(function(){
     //    .mouseout(function() {
     //        $('.thumbnail').fadeTo(200, 1);
     //        });
-
-
 
 
 
