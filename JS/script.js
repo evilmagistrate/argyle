@@ -9,6 +9,8 @@ $(document).ready(function(){
         $('html, body').animate({ scrollTop: 0 }, 'fast');
     });
 
+//slick carousel api
+
 
 //slick carousel api
 
