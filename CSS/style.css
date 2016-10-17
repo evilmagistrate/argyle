@@ -1,41 +1,51 @@
 html {
-  max-width: 1920px; }
+  max-width: 2556px; }
 
 body {
   background-color: #282828;
   font-family: Rokkitt, "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-size: 14pt;
+  color: #ffffff;
   font-weight: 600;
   width: 100%;
-  margin: 0; }
+  margin: 0 auto; }
 
 #banner {
   position: relative;
   clear: both;
-  margin-left: 10.3%;
+  margin-left: 4.4%;
   margin-top: 2em;
-  width: 600px;
+  margin-bottom: 1em;
+  width: 680px;
+  z-index: 1;
   font-family: Amiko, Arial, sans-serif;
   color: #ffffff;
   text-transform: uppercase; }
   #banner header {
     position: relative; }
   #banner #logo {
-    font-size: 3.9em; }
+    font-size: 4.5em;
+    height: 1em; }
   #banner nav {
     font-size: 1.2em;
-    margin: -1em 1.2em 0 .2em; }
+    margin: .25em 1.2em 0 .2em;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between; }
     #banner nav a {
       text-decoration: none;
       color: #ffffff; }
-    #banner nav #contact_link {
-      float: right; }
   @media only screen and (max-width: 1366px) {
-    #banner #logo {
-      font-size: 3.9em; } }
+    #banner {
+      width: 600px; }
+      #banner #logo {
+        font-size: 3.9em; } }
   @media only screen and (max-width: 1024px) {
     #banner {
-      margin: 4% 0 0 8.5%;
+      margin: 4% 0 0 4.6%;
       width: 440px; }
       #banner #logo {
         font-size: 2.8em;
@@ -55,49 +65,36 @@ body {
         margin-right: 0; }
       #banner nav {
         margin-top: -.25em;
-        margin-left: .2em; }
-        #banner nav #contact_link {
-          float: right; } }
+        margin-left: .2em; } }
   @media only screen and (max-width: 567px) {
     #banner {
       margin: 5% 0 0 5%;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
       max-width: 100%;
-      width: 340px; }
+      justify-content: flex-start; }
       #banner #logo {
-        font-size: 1.8em;
+        font-size: 2.2em;
         line-height: 1em; }
-        #banner #logo #logo_ralph {
-          font-size: 1.225em; }
       #banner nav {
         text-align: right;
-        margin-top: 2.1%;
+        margin-top: -1%;
         margin-right: 2%; }
       #banner #contact_link {
         position: static; } }
   @media only screen and (max-width: 320px) {
     #banner #logo {
-      font-size: 1.5em;
-      line-height: 1em; }
-      #banner #logo #logo_ralph {
-        font-size: 1.225em; }
+      font-size: 1.8em; }
     #banner nav {
       font-size: 1em;
       text-align: right;
-      margin-top: 1.3%;
-      margin-right: 10%; } }
+      margin-right: 16%; } }
 
 div#wrapper {
   height: 100%;
-  margin: 0 auto;
-  max-width: 100%; }
-  @media only screen and (max-width: 736px) {
+  max-width: 100%;
+  margin-left: 4%; }
+  @media only screen and (max-width: 1366px) {
     div#wrapper {
-      margin-left: 4%; } }
+      margin: 2% 4% 4% 4%; } }
   @media only screen and (max-width: 567px) {
     div#wrapper {
       margin: 2% 4% 4% 4%; } }
@@ -105,29 +102,26 @@ div#wrapper {
     div#wrapper {
       margin: 2% -2%; } }
 
+#spotlight {
+  width: 100%; }
+
 #portfolio_gallery {
-  max-width: 1174px;
-  margin-left: 10%; }
-  @media only screen and (max-width: 1024px) {
-    #portfolio_gallery {
-      max-width: 100%;
-      margin-left: 8%; } }
-  @media only screen and (max-width: 736px) {
-    #portfolio_gallery {
-      max-width: 100%;
-      margin-left: 0; } }
+  z-index: 2;
+  max-width: 100%; }
   @media only screen and (max-width: 567px) {
     #portfolio_gallery {
-      max-width: 96%;
-      margin-left: 0; } }
+      max-width: 96%; } }
   @media only screen and (max-width: 320px) {
     #portfolio_gallery {
       max-width: 100%; } }
 
 .showcard {
   float: left;
-  margin: 1%;
-  width: 48%; }
+  margin: 1%; }
+  @media only screen and (max-width: 1366px) {
+    .showcard {
+      max-width: 100%;
+      width: 46%; } }
   @media only screen and (max-width: 1024px) {
     .showcard {
       width: 46%; } }
@@ -141,38 +135,53 @@ div#wrapper {
   max-width: 100%; }
 
 footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   background-color: #282828;
   z-index: 1;
-  height: 4em;
   width: 100%;
   position: fixed;
-  bottom: -1em; }
+  bottom: -1em;
+  height: 6%; }
+  @media only screen and (max-width: 1366px) {
+    footer {
+      height: 9%; } }
   @media only screen and (max-width: 1024px) {
     footer {
+      height: 8%; } }
+  @media only screen and (max-width: 736px) {
+    footer {
       position: static; } }
+
+#top_button {
+  font-family: Amiko, Arial, sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 1% 0 0 5%;
+  font-size: .8em;
+  text-decoration: none; }
 
 #copyright {
   font-family: Amiko, Arial, sans-serif;
   font-weight: 400;
   color: #ffffff;
-  float: right;
-  padding: 1% 12% 2%; }
-  @media only screen and (max-width: 1366px) {
-    #copyright {
-      font-size: .8em; } }
-  @media only screen and (max-width: 1024px) {
-    #copyright {
-      font-size: .7em;
-      padding: 1% 5% 2%; } }
+  padding: 1% 9% 2% 0;
+  font-size: .8em; }
   @media only screen and (max-width: 736px) {
     #copyright {
-      font-size: .6em;
-      padding: 1% 6% 2%; } }
-  @media only screen and (max-width: 567px) {
-    #copyright {
-      font-size: .6em;
-      padding: 1% 7% 2%; } }
+      font-size: .6em; } }
   #copyright .big {
     font-size: larger; }
+
+#banner nav a:hover {
+  color: #626f7f; }
+
+img.thumbnail:hover {
+  box-shadow: .5em .5em 1em #000; }
 
 /*# sourceMappingURL=style.css.map */
