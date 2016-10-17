@@ -1,23 +1,18 @@
 
 $(document).ready(function(){
 
-    //$('#portfolio').addClass('current');
+    $('nav a span').hide();
+    $('#portfolio_link span').show();
 
 
-    $('#contact_link').on('click', function () {
+//toggle current nav item
 
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
-        
-    });
+    $('nav a').on('click', function () {
 
-
-    //return to top
-
-
-    $('.showcard').click(function() {
         event.preventDefault();
-        //$(this).hide();
+
+        $(this).children('span').show();
+        $(this).siblings().children('span').hide();
 
     });
 
@@ -28,7 +23,15 @@ $(document).ready(function(){
         $('html, body').animate({ scrollTop: 0 }, 'fast');
     });
 
-//slick carousel api
+
+
+//inserting active item into spotlight
+
+    $('.showcard').click(function() {
+        event.preventDefault();
+        //$(this).hide();
+
+    });
 
 
 //slick carousel api
@@ -66,6 +69,8 @@ $(document).ready(function(){
     //    .mouseout(function() {
     //        $('.thumbnail').fadeTo(200, 1);
     //        });
+
+
 
 
 
