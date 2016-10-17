@@ -102,6 +102,9 @@ div#wrapper {
     div#wrapper {
       margin: 2% -2%; } }
 
+#spotlight {
+  width: 100%; }
+
 #portfolio_gallery {
   z-index: 2;
   max-width: 100%; }

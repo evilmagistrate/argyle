@@ -29,33 +29,36 @@ $(document).ready(function(){
 
     $('.showcard').click(function() {
         event.preventDefault();
-        //$(this).hide();
+
+        var $showcardID = this.id;
+
+        $('#imagewrapper').remove();
+        $('#spotlight').load('gallery.html #' + $showcardID).hide().fadeIn('slow');
 
     });
 
+////
+//////slick carousel api
+////
+//    $('.slickCarousel').slick();
+//
+//    $('.slider-for').slick({
+//        slidesToShow: 1,
+//        slidesToScroll: 1,
+//        arrows: false,
+//        fade: true,
+//        asNavFor: '.slider-nav'
+//    });
+//
+//    $('.slider-nav').slick({
+//        slidesToShow: 3,
+//        slidesToScroll: 1,
+//        asNavFor: '.slider-for',
+//        dots: true,
+//        centerMode: true,
+//        focusOnSelect: true
+//    });
 
-//slick carousel api
-
-
-    $(' TODO ').slick({
-    });
-
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
-
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-    });
 
 
 //darkens images on hover
@@ -69,9 +72,6 @@ $(document).ready(function(){
     //    .mouseout(function() {
     //        $('.thumbnail').fadeTo(200, 1);
     //        });
-
-
-
 
 
 });
