@@ -30,35 +30,36 @@ $(document).ready(function(){
     $('.showcard').click(function() {
         event.preventDefault();
 
-        var $showcardID = this.id;
+        var showcardID = $(this).attr('id') ;
+        console.log(showcardID);
 
-        $('#imagewrapper').remove();
-        $('#spotlight').load('gallery.html #' + $showcardID).hide().fadeIn('slow');
+        $('#imageWrapper').remove();
+        $('#spotlight').load('gallery.html #' + showcardID).hide().fadeIn('slow');
 
     });
 
-////
-//////slick carousel api
-////
-//    $('.slickCarousel').slick();
-//
-//    $('.slider-for').slick({
-//        slidesToShow: 1,
-//        slidesToScroll: 1,
-//        arrows: false,
-//        fade: true,
-//        asNavFor: '.slider-nav'
-//    });
-//
-//    $('.slider-nav').slick({
-//        slidesToShow: 3,
-//        slidesToScroll: 1,
-//        asNavFor: '.slider-for',
-//        dots: true,
-//        centerMode: true,
-//        focusOnSelect: true
-//    });
 
+//slick carousel api
+
+    $('.slickCarousel').slick({});
+    console.log('got here');
+
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+    });
 
 
 //darkens images on hover
