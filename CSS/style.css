@@ -103,7 +103,9 @@ div#wrapper {
       margin: 2% -2%; } }
 
 #spotlight {
-  width: 100%; }
+  width: 100%;
+  margin: 0 0 1% 1%;
+  background-color: pink; }
 
 #portfolio_gallery {
   z-index: 2;

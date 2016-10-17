@@ -4,6 +4,11 @@ $(document).ready(function(){
     $('nav a span').hide();
     $('#portfolio_link span').show();
 
+    initlightSlider();
+    console.log('got here');
+
+
+
 
 //toggle current nav item
 
@@ -36,31 +41,69 @@ $(document).ready(function(){
         $('#imageWrapper').remove();
         $('#spotlight').load('gallery.html #' + showcardID).hide().fadeIn('slow');
 
+//returns to top to view new content
+
+        $('html, body').animate({ scrollTop: 0 }, 'fast');
+        initlightSlider();
+        console.log('got here');
     });
 
+//lightslider
 
-//slick carousel api
+    function initlightSlider() {
 
-    $('.slickCarousel').slick({});
-    console.log('got here');
+        $(".lightSlider").lightSlider({
+            item: 6,
+            autowidth: false,
+            slideMove: 1,
+            slideMargin: 10,
+            mode: "fade",
+            useCSS: true,
+            cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+            easing: 'linear', //'for jquery animation',////
 
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
+            speed: 400, //ms'
+            auto: false,
+            loop: true,
+            slideEndAnimation: true,
+            pause: 2000,
 
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-    });
+            keyPress: false,
+            controls: true,
+            prevHtml: '',
+            nextHtml: '',
+            verticalHeight: 500,
+            vThumbWidth: 100,
 
+            thumbItem: 10,
+            pager: true,
+            gallery: false,
+            galleryMargin: 5,
+            thumbMargin: 5,
+            currentPagerPosition: 'middle',
+
+            enableTouch: true,
+            enableDrag: true,
+            freeMove: true,
+            swipeThreshold: 40,
+
+            responsive: [],
+
+            onBeforeStart: function (el) {
+            },
+            onSliderLoad: function (el) {
+            },
+            onBeforeSlide: function (el) {
+            },
+            onAfterSlide: function (el) {
+            },
+            onBeforeNextSlide: function (el) {
+            },
+            onBeforePrevSlide: function (el) {
+            }
+
+        });
+    }
 
 //darkens images on hover
 
