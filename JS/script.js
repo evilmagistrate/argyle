@@ -3,6 +3,8 @@ $(document).ready(function(){
 
     $('nav a span').hide();
     $('#portfolio_link span').show();
+    initSlick();
+
 
 
 //toggle current nav item
@@ -41,25 +43,31 @@ $(document).ready(function(){
 
 //slick carousel api
 
-    $('.slickCarousel').slick({});
-    console.log('got here');
+    function initSlick() {
 
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
+        $('.slickCarousel').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+        });
+        console.log('got here');
 
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-    });
+        //$('.featured').slick({
+        //    slidesToShow: 1,
+        //    slidesToScroll: 1,
+        //    arrows: false,
+        //    fade: true,
+        //    asNavFor: '.slickCarousel'
+        //});
+        //
+        //$('.slickCarousel').slick({
+        //    slidesToShow: 3,
+        //    slidesToScroll: 1,
+        //    asNavFor: '.featured',
+        //    dots: true,
+        //    centerMode: true,
+        //    focusOnSelect: true
+        //});
+    }
 
 
 //darkens images on hover
