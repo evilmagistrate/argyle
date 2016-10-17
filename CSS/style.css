@@ -102,9 +102,6 @@ div#wrapper {
     div#wrapper {
       margin: 2% -2%; } }
 
-#spotlight {
-  width: 100%; }
-
 #portfolio_gallery {
   z-index: 2;
   max-width: 100%; }
@@ -183,5 +180,28 @@ footer {
 
 img.thumbnail:hover {
   box-shadow: .5em .5em 1em #000; }
+
+#spotlight {
+  width: 100%;
+  margin: 0 0 1% 1%; }
+  #spotlight div.imageWrapper {
+    width: 60%; }
+    #spotlight div.imageWrapper .thumbnailSlider {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: center; }
+      #spotlight div.imageWrapper .thumbnailSlider a {
+        padding: 1% 1% 1% 0; }
+        #spotlight div.imageWrapper .thumbnailSlider a img {
+          max-width: 100%;
+          padding: 1% 1% 1% 0; }
+
+#feature {
+  width: 60%; }
 
 /*# sourceMappingURL=style.css.map */

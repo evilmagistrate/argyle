@@ -232,13 +232,6 @@ div#wrapper {
   }
 }
 
-
-// spotlight
-
-#spotlight {
-  width: 100%;
-}
-
 // portfolio_gallery
 
 #portfolio_gallery {
@@ -351,4 +344,38 @@ footer {
 
 img.thumbnail:hover {
   box-shadow: .5em .5em 1em #000;
+}
+
+
+// spotlight
+
+#spotlight {
+  width: 100%;
+  margin: 0 0 1% 1%;
+
+  & div.imageWrapper {
+
+    width: 60%;
+
+    & .thumbnailSlider {
+      @include flex-box();
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: center;
+
+      & a {
+        padding: 1% 1% 1% 0;
+
+        & img {
+
+          max-width: 100%;
+          padding: 1% 1% 1% 0;
+        }
+      }
+    }
+  }
+}
+
+#feature {
+  width: 60%;
 }

@@ -30,7 +30,7 @@ $(document).ready(function(){
     $('.showcard').click(function() {
         event.preventDefault();
 
-        var showcardID = $(this).attr('id') ;
+        var showcardID = $(this).attr('id').replace('card-', '');
         console.log(showcardID);
 
         $('#imageWrapper').remove();
@@ -41,25 +41,25 @@ $(document).ready(function(){
 
 //slick carousel api
 
-    $('.slickCarousel').slick({});
-    console.log('got here');
-
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
-
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-    });
+    //$('.slickCarousel').slick({});
+    //console.log('got here');
+    //
+    //$('.slider-for').slick({
+    //    slidesToShow: 1,
+    //    slidesToScroll: 1,
+    //    arrows: false,
+    //    fade: true,
+    //    asNavFor: '.slider-nav'
+    //});
+    //
+    //$('.slider-nav').slick({
+    //    slidesToShow: 3,
+    //    slidesToScroll: 1,
+    //    asNavFor: '.slider-for',
+    //    dots: true,
+    //    centerMode: true,
+    //    focusOnSelect: true
+    //});
 
 
 //darkens images on hover
