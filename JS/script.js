@@ -36,30 +36,24 @@ $(document).ready(function(){
         $('#imageWrapper').remove();
         $('#spotlight').load('gallery.html #' + showcardID).hide().fadeIn('slow');
 
+        $('html, body').animate({ scrollTop: 0 }, 'fast');
+
     });
 
+//inserting active item into spotlight
 
-//slick carousel api
+    $('.emBiggen').click(function() {
+        event.preventDefault();
 
-    //$('.slickCarousel').slick({});
-    //console.log('got here');
-    //
-    //$('.slider-for').slick({
-    //    slidesToShow: 1,
-    //    slidesToScroll: 1,
-    //    arrows: false,
-    //    fade: true,
-    //    asNavFor: '.slider-nav'
-    //});
-    //
-    //$('.slider-nav').slick({
-    //    slidesToShow: 3,
-    //    slidesToScroll: 1,
-    //    asNavFor: '.slider-for',
-    //    dots: true,
-    //    centerMode: true,
-    //    focusOnSelect: true
-    //});
+        $(this).addClass('thumbFeature');
+        $(this).siblings().removeClass('thumbFeature');
+
+        var imgSrc= $(this).children().attr('src').replace('-th','');
+
+        $('#feature').children().attr('src', imgSrc);
+
+    });
+
 
 
 //darkens images on hover

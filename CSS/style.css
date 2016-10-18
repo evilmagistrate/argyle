@@ -157,7 +157,7 @@ footer {
 
 #top_button {
   font-family: Amiko, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   color: #ffffff;
   padding: 1% 0 0 5%;
   font-size: .8em;
@@ -175,17 +175,45 @@ footer {
   #copyright .big {
     font-size: larger; }
 
-#banner nav a:hover {
-  color: #626f7f; }
-
-img.thumbnail:hover {
-  box-shadow: .5em .5em 1em #000; }
-
 #spotlight {
-  width: 100%;
-  margin: 0 0 1% 1%; }
+  max-width: 1330px;
+  margin: 2% 0 1% 1%;
+  position: relative; }
+  @media only screen and (max-width: 1366px) {
+    #spotlight {
+      max-width: 94%; } }
+  @media only screen and (max-width: 1024px) {
+    #spotlight {
+      max-width: 94%; } }
+  #spotlight #projectDescription {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    margin: 0 0 0 2%;
+    background-color: #ffffff;
+    color: #727f8f;
+    height: 100%;
+    overflow: scroll; }
+    @media only screen and (max-width: 1024px) {
+      #spotlight #projectDescription {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 2% 0 0 0; } }
+  #spotlight p {
+    margin: 0 5% 5% 5%; }
+  #spotlight h3 {
+    margin: 5% 5% 0 5%;
+    font-family: Amiko, Arial, sans-serif;
+    text-transform: uppercase; }
   #spotlight div.imageWrapper {
-    width: 60%; }
+    max-width: 79%; }
+    @media only screen and (max-width: 1024px) {
+      #spotlight div.imageWrapper {
+        max-width: 100%;
+        float: left;
+        clear: both; } }
     #spotlight div.imageWrapper .thumbnailSlider {
       display: -webkit-box;
       display: -moz-box;
@@ -194,14 +222,36 @@ img.thumbnail:hover {
       display: flex;
       justify-content: flex-start;
       align-content: flex-start;
-      align-items: center; }
+      align-items: center;
+      margin-left: -.25%; }
       #spotlight div.imageWrapper .thumbnailSlider a {
-        padding: 1% 1% 1% 0; }
+        border: solid #282828 3px; }
         #spotlight div.imageWrapper .thumbnailSlider a img {
           max-width: 100%;
-          padding: 1% 1% 1% 0; }
+          padding-top: 3%;
+          -webkit-transition: all .25s ease;
+          -moz-transition: all .5s ease;
+          -o-transition: all .5s ease;
+          transition: all .5s ease; }
 
-#feature {
-  width: 60%; }
+#feature img {
+  max-width: 100%; }
+
+#banner nav a:hover {
+  color: #727f8f; }
+
+img.thumbnail:hover {
+  box-shadow: .5em .5em 1em #000; }
+
+a.emBiggen img:hover {
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .5s  ease;
+  -o-transition: all 0.5s ease;
+  transition: all .5s  ease;
+  border-top: solid 6px #727f8f;
+  margin-bottom: -6px; }
+
+a.thumbFeature {
+  opacity: .5; }
 
 /*# sourceMappingURL=style.css.map */

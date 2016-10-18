@@ -2,7 +2,7 @@
 
 
 $dark: #282828;
-$lessdark: #626f7f;
+$lessdark: #727f8f;
 $bright: #ffffff;
 
 $font-serif: Rokkitt, "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -308,7 +308,7 @@ footer {
   font: {
     family: $font-sans;
   }
-  font-weight: 400;
+  font-weight: 600;
   color: $bright;
   padding: 1% 0 0 5%;
   font-size: .8em;
@@ -336,6 +336,89 @@ footer {
 }
 
 
+// spotlight
+
+#spotlight {
+
+  max-width: 1330px;
+  margin: 2% 0 1% 1%;
+  position: relative;
+
+  @include responsive(wide-screens) {
+    max-width: 94%;
+  }
+
+  @include responsive(medium-screens) {
+    max-width: 94%;
+  }
+
+  & #projectDescription {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    margin: 0 0 0 2%;
+    background-color: $bright;
+    color: $lessdark;
+    height: 100%;
+    overflow: scroll;
+
+    @include responsive(medium-screens) {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin: 2% 0 0 0;
+    }
+  }
+
+  p {
+      margin: 0 5% 5% 5%;
+    }
+
+  h3 {
+    margin: 5% 5% 0 5%;
+    font-family: $font-sans;
+    text-transform: uppercase;
+  }
+
+    & div.imageWrapper {
+
+      max-width: 79%;
+
+      @include responsive(medium-screens) {
+        max-width: 100%;
+        float: left;
+        clear: both;
+      }
+
+      & .thumbnailSlider {
+        @include flex-box();
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: center;
+        margin-left: -.25%;
+
+        & a {
+          border: solid $dark 3px;
+
+          & img {
+            max-width: 100%;
+            padding-top: 3%;
+            -webkit-transition: all .25s ease;
+            -moz-transition: all .5s ease;
+            -o-transition: all .5s ease;
+            transition: all .5s ease;
+          }
+        }
+      }
+    }
+  }
+
+
+#feature img {
+  max-width: 100%;
+}
+
 // class styles, psuedo-classes
 
 #banner nav a:hover {
@@ -346,36 +429,15 @@ img.thumbnail:hover {
   box-shadow: .5em .5em 1em #000;
 }
 
-
-// spotlight
-
-#spotlight {
-  width: 100%;
-  margin: 0 0 1% 1%;
-
-  & div.imageWrapper {
-
-    width: 60%;
-
-    & .thumbnailSlider {
-      @include flex-box();
-      justify-content: flex-start;
-      align-content: flex-start;
-      align-items: center;
-
-      & a {
-        padding: 1% 1% 1% 0;
-
-        & img {
-
-          max-width: 100%;
-          padding: 1% 1% 1% 0;
-        }
-      }
-    }
-  }
+a.emBiggen img:hover {
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .5s  ease;
+  -o-transition: all .5s ease ;
+  transition: all .5s  ease;
+  border-top: solid 6px $lessdark;
+  margin-bottom: -6px;
 }
 
-#feature {
-  width: 60%;
+a.thumbFeature {
+  opacity: .5;
 }
