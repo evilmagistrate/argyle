@@ -31,81 +31,91 @@ $(document).ready(function(){
         event.preventDefault();
 
         var showcardID = $(this).attr('id').replace('card-', '');
+        var spotlight =  $('#spotlight');
         console.log(showcardID);
 
-        $('#imageWrapper').remove();
-        $('#spotlight').load('gallery.html #' + showcardID).hide().fadeIn('slow');
+        spotlight.children().remove();
+        spotlight.load('gallery.html #' + showcardID).hide().fadeIn('slow');
 
         $('html, body').animate({ scrollTop: 0 }, 'fast');
 
     });
 
+
+    $(document).ajaxComplete(function () {
+
 //inserting active thumnbail into feature
 
-    $('.emBiggen').click(function() {
-        event.preventDefault();
+        $('#spotlight').on('click', '.emBiggen', inukChuk);
 
-        $(this).addClass('thumbFeature');
-        $(this).siblings().removeClass('thumbFeature');
+        function inukChuk(e) {
 
-        var imgSrc= $(this).children().attr('src').replace('-th','');
+            e.preventDefault();
 
-        $('#feature').children().attr('src', imgSrc);
+            $(this).addClass('thumbFeature');
+            $(this).siblings().removeClass('thumbFeature');
 
-    });
+            var imgSrc = $(this).children().attr('src').replace('-th', '');
+
+            $('.feature').children().attr('src', imgSrc);
+        }
+
+
 
 //previous and next buttons for image sldeshow
 
-    $('.imageNext').on('click', getNext);
-    $('.imagePrevious').on('click', getPrev);
+        $('.imageNext').on('click', getNext);
+        $('.imagePrevious').on('click', getPrev);
 
-    $(document).keydown(function(e){
-        if (e.keyCode == 37) {
-            getPrev();
-        }
-    });
+        $(document).keydown(function(e){
+            if (e.keyCode == 37) {
+                getPrev();
+            }
+        });
 
-    $(document).keydown(function(e){
-        if (e.keyCode == 39) {
-            getNext();
-        }
-    });
+        $(document).keydown(function(e){
+            if (e.keyCode == 39) {
+                getNext();
+            }
+        });
 
-    function getNext() {
+        function getNext() {
 
-        var nextNew = $('.thumbFeature').next();
+            var nextNew = $('.thumbFeature').next();
 
-        if(nextNew.length == 0) {
-            nextNew = $('.emBiggen').first();
-        }
+            if(nextNew.length == 0) {
+                nextNew = $('.emBiggen').first();
+            }
 
-        var nextNewURL = nextNew.children().attr('src').replace('-th','');
+            var nextNewURL = nextNew.children().attr('src').replace('-th','');
 
-        $('#feature').children().attr('src', nextNewURL);
+            $('.feature').children().attr('src', nextNewURL);
 
 
-        $(nextNew).addClass('thumbFeature');
-        $(nextNew).siblings().removeClass('thumbFeature');
+            $(nextNew).addClass('thumbFeature');
+            $(nextNew).siblings().removeClass('thumbFeature');
 
-    }
-
-    function getPrev() {
-
-        var nextPrev = $('.thumbFeature').prev();
-
-        if(nextPrev.length == 0) {
-            nextPrev = $('.emBiggen').last();
         }
 
-        var nextPrevURL = nextPrev.children().attr('src').replace('-th','');
+        function getPrev() {
 
-        $('#feature').children().attr('src', nextPrevURL);
+            var nextPrev = $('.thumbFeature').prev();
+
+            if(nextPrev.length == 0) {
+                nextPrev = $('.emBiggen').last();
+            }
+
+            var nextPrevURL = nextPrev.children().attr('src').replace('-th','');
+
+            $('.feature').children().attr('src', nextPrevURL);
 
 
-        $(nextPrev).addClass('thumbFeature');
-        $(nextPrev).siblings().removeClass('thumbFeature');
+            $(nextPrev).addClass('thumbFeature');
+            $(nextPrev).siblings().removeClass('thumbFeature');
 
-    }
+        }
+
+        });
 
 //darkens images on hover
 
