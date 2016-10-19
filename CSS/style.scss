@@ -104,6 +104,7 @@ body {
     font: {
       size: 1.2em;
     }
+    
     margin: .25em 1.2em 0 .2em;
 
     @include flex-box;
@@ -112,7 +113,20 @@ body {
     & a {
       text-decoration: none;
       color: $bright;
+      
+      & span {
+        padding: 0 .2em 0 .2em;
+        opacity: .5;
+      }
     }
+  }
+
+  .leftNav {
+    margin-left: -1em;
+  }
+
+  .rightNav {
+    margin-right: -1em;
   }
 
   @include responsive(wide-screens) {
@@ -124,6 +138,7 @@ body {
       }
     }
   }
+
 
   @include responsive(medium-screens) {
     margin: 4% 0 0 4.6%;
@@ -450,8 +465,39 @@ footer {
   @include responsive(smaller-screens) {
     max-width: 100%;
   }
+}
 
+// previous and next button
 
+.imagePrevious, .imageNext {
+  position: absolute;
+  top: 40%;
+
+  font: {
+    weight: 800;
+    size: 2em;
+    family: $font-sans;
+  }
+  color: $bright;
+  background-color: $dark;
+  padding: .75% .5% 0 .5%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.imagePrevious {
+}
+
+.imageNext {
+  left: 76%;
+}
+
+.imagePrevious, .imageNext {
+  @include responsive(small-screens) {
+    visibility: hidden;
+  }
 }
 
 // class styles, psuedo-classes

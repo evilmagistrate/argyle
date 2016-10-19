@@ -40,7 +40,7 @@ $(document).ready(function(){
 
     });
 
-//inserting active item into spotlight
+//inserting active thumnbail into feature
 
     $('.emBiggen').click(function() {
         event.preventDefault();
@@ -54,7 +54,58 @@ $(document).ready(function(){
 
     });
 
+//previous and next buttons for image sldeshow
 
+    $('.imageNext').on('click', getNext);
+    $('.imagePrevious').on('click', getPrev);
+
+    $(document).keydown(function(e){
+        if (e.keyCode == 37) {
+            getPrev();
+        }
+    });
+
+    $(document).keydown(function(e){
+        if (e.keyCode == 39) {
+            getNext();
+        }
+    });
+
+    function getNext() {
+
+        var nextNew = $('.thumbFeature').next();
+
+        if(nextNew.length == 0) {
+            nextNew = $('.emBiggen').first();
+        }
+
+        var nextNewURL = nextNew.children().attr('src').replace('-th','');
+
+        $('#feature').children().attr('src', nextNewURL);
+
+
+        $(nextNew).addClass('thumbFeature');
+        $(nextNew).siblings().removeClass('thumbFeature');
+
+    }
+
+    function getPrev() {
+
+        var nextPrev = $('.thumbFeature').prev();
+
+        if(nextPrev.length == 0) {
+            nextPrev = $('.emBiggen').last();
+        }
+
+        var nextPrevURL = nextPrev.children().attr('src').replace('-th','');
+
+        $('#feature').children().attr('src', nextPrevURL);
+
+
+        $(nextPrev).addClass('thumbFeature');
+        $(nextPrev).siblings().removeClass('thumbFeature');
+
+    }
 
 //darkens images on hover
 

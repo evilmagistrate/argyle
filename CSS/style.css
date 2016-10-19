@@ -38,6 +38,13 @@ body {
     #banner nav a {
       text-decoration: none;
       color: #ffffff; }
+      #banner nav a span {
+        padding: 0 .2em 0 .2em;
+        opacity: .5; }
+  #banner .leftNav {
+    margin-left: -1em; }
+  #banner .rightNav {
+    margin-right: -1em; }
   @media only screen and (max-width: 1366px) {
     #banner {
       width: 600px; }
@@ -264,6 +271,25 @@ footer {
   @media only screen and (max-width: 567px) {
     #feature img {
       max-width: 100%; } }
+
+.imagePrevious, .imageNext {
+  position: absolute;
+  top: 40%;
+  font-weight: 800;
+  font-size: 2em;
+  font-family: Amiko, Arial, sans-serif;
+  color: #ffffff;
+  background-color: #282828;
+  padding: .75% .5% 0 .5%; }
+  .imagePrevious:hover, .imageNext:hover {
+    cursor: pointer; }
+
+.imageNext {
+  left: 76%; }
+
+@media only screen and (max-width: 736px) {
+  .imagePrevious, .imageNext {
+    visibility: hidden; } }
 
 #banner nav a:hover {
   color: #727f8f; }

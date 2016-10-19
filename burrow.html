@@ -24,8 +24,8 @@
     <div id="banner">
         <div id="logo"><span id="logo_ralph">Ralph</span> Emrick</div>
         <nav>
-            <a href="" id="portfolio_link"><span>&lt;</span>portfolio<span>&gt;</span></a>
-            <a href="" id="contact_link"><span>&lt;</span>contact<span>&gt;</span></a>
+            <a href="" id="portfolio_link"><span class="leftNav">&lt;</span>portfolio<span>&gt;</span></a>
+            <a href="" id="contact_link"><span>&lt;</span>contact<span class="rightNav">&gt;</span></a>
         </nav>
     </div> <!--end of div id="banner"-->
 
@@ -36,7 +36,11 @@
     <div id="spotlight">
         <div id="burrow">
             <div class="imageWrapper">
-            <div id="feature"><img src="img/burrow-packaging.jpg" alt="" /></div>
+
+            <div id="feature"><img src="img/burrow-packaging.jpg" alt="" />
+                    <div class="imagePrevious">&lt;</div>
+                    <div class="imageNext">&gt;</div>
+                </div>
             <div class="thumbnailSlider">
                 <a href="" class="emBiggen"><img src="img/burrow-leaves-th.jpg" alt="" /></a>
                 <a href="" class="emBiggen"><img src="img/burrow-colors-th.jpg" alt="" /></a>
@@ -75,15 +79,6 @@
         </a>
 
     </div>
-
-    <footer>
-        <a id="top_button" href="#top">TOP</a>
-        <div id="copyright">
-            Ralph Emrick
-            <span class="big">&copy;</span><!--2016- -->
-            <script>document.write(new Date().getFullYear());</script>
-        </div>
-    </footer>
 
 </div> <!--end of div id="wrapper"-->
 
