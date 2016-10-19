@@ -143,17 +143,12 @@ footer {
   z-index: 1;
   width: 100%;
   position: fixed;
-  bottom: -1em;
-  height: 6%; }
-  @media only screen and (max-width: 1366px) {
-    footer {
-      height: 9%; } }
-  @media only screen and (max-width: 1024px) {
-    footer {
-      height: 8%; } }
+  bottom: 0;
+  height: 3em; }
   @media only screen and (max-width: 736px) {
     footer {
-      position: static; } }
+      position: static;
+      height: 2em; } }
 
 #top_button {
   font-family: Amiko, Arial, sans-serif;
@@ -171,9 +166,8 @@ footer {
   font-size: .8em; }
   @media only screen and (max-width: 736px) {
     #copyright {
-      font-size: .6em; } }
-  #copyright .big {
-    font-size: larger; }
+      font-size: .6em;
+      padding: 1% 5% 2% 0; } }
 
 #spotlight {
   max-width: 1330px;
@@ -182,9 +176,14 @@ footer {
   @media only screen and (max-width: 1366px) {
     #spotlight {
       max-width: 94%; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 736px) {
     #spotlight {
-      max-width: 94%; } }
+      max-width: 100%;
+      margin: 2% 2% 1% 2%; } }
+  @media only screen and (max-width: 320px) {
+    #spotlight {
+      max-width: 100%;
+      margin: 2% -2% 1% 2%; } }
   #spotlight #projectDescription {
     position: absolute;
     top: 0;
@@ -195,12 +194,15 @@ footer {
     color: #727f8f;
     height: 100%;
     overflow: scroll; }
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 736px) {
+      #spotlight #projectDescription {
+        width: 40%; } }
+    @media only screen and (max-width: 567px) {
       #spotlight #projectDescription {
         position: relative;
         width: 100%;
         height: auto;
-        margin: 2% 0 0 0; } }
+        margin: 2% 0 2% 0; } }
   #spotlight p {
     margin: 0 5% 5% 5%; }
   #spotlight h3 {
@@ -209,7 +211,10 @@ footer {
     text-transform: uppercase; }
   #spotlight div.imageWrapper {
     max-width: 79%; }
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 736px) {
+      #spotlight div.imageWrapper {
+        max-width: 60%; } }
+    @media only screen and (max-width: 567px) {
       #spotlight div.imageWrapper {
         max-width: 100%;
         float: left;
@@ -223,9 +228,26 @@ footer {
       justify-content: flex-start;
       align-content: flex-start;
       align-items: center;
-      margin-left: -.25%; }
+      margin: 0 -.3% 0 -.3%; }
+      @media only screen and (max-width: 736px) {
+        #spotlight div.imageWrapper .thumbnailSlider {
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: space-around;
+          margin: 0 1% 0 -1.5%; } }
+      @media only screen and (max-width: 567px) {
+        #spotlight div.imageWrapper .thumbnailSlider {
+          justify-content: flex-start;
+          width: 103%;
+          margin: 0 -.3% 0 -1%; } }
       #spotlight div.imageWrapper .thumbnailSlider a {
         border: solid #282828 3px; }
+        @media only screen and (max-width: 736px) {
+          #spotlight div.imageWrapper .thumbnailSlider a {
+            width: 30%; } }
+        @media only screen and (max-width: 567px) {
+          #spotlight div.imageWrapper .thumbnailSlider a {
+            width: 23%; } }
         #spotlight div.imageWrapper .thumbnailSlider a img {
           max-width: 100%;
           padding-top: 3%;
@@ -236,6 +258,12 @@ footer {
 
 #feature img {
   max-width: 100%; }
+  @media only screen and (max-width: 736px) {
+    #feature img {
+      max-width: 98%; } }
+  @media only screen and (max-width: 567px) {
+    #feature img {
+      max-width: 100%; } }
 
 #banner nav a:hover {
   color: #727f8f; }

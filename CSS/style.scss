@@ -286,19 +286,12 @@ footer {
   z-index: 1;
   width: 100%;
   position: fixed;
-  bottom: -1em;
-  height: 6%;
-
-  @include responsive(wide-screens) {
-    height: 9%;
-  }
-
-  @include responsive(medium-screens) {
-    height: 8%;
-  }
+  bottom: 0;
+  height: 3em;
 
   @include responsive(small-screens) {
     position: static;
+    height: 2em;
   }
 
 }
@@ -328,10 +321,7 @@ footer {
 
   @include responsive(small-screens) {
     font-size: .6em;
-  }
-
-  .big {
-    font-size: larger;
+    padding: 1% 5% 2% 0;
   }
 }
 
@@ -348,8 +338,14 @@ footer {
     max-width: 94%;
   }
 
-  @include responsive(medium-screens) {
-    max-width: 94%;
+  @include responsive(small-screens) {
+    max-width: 100%;
+    margin: 2% 2% 1% 2%;
+  }
+
+  @include responsive(tiny-screens) {
+    max-width: 100%;
+    margin: 2% -2% 1% 2%;
   }
 
   & #projectDescription {
@@ -363,11 +359,15 @@ footer {
     height: 100%;
     overflow: scroll;
 
-    @include responsive(medium-screens) {
+    @include responsive(small-screens) {
+      width: 40%;
+    }
+
+    @include responsive(smaller-screens) {
       position: relative;
       width: 100%;
       height: auto;
-      margin: 2% 0 0 0;
+      margin: 2% 0 2% 0;
     }
   }
 
@@ -385,7 +385,11 @@ footer {
 
       max-width: 79%;
 
-      @include responsive(medium-screens) {
+      @include responsive(small-screens) {
+        max-width: 60%;
+      }
+
+      @include responsive(smaller-screens) {
         max-width: 100%;
         float: left;
         clear: both;
@@ -396,10 +400,32 @@ footer {
         justify-content: flex-start;
         align-content: flex-start;
         align-items: center;
-        margin-left: -.25%;
+        margin: 0 -.3% 0 -.3%;
+
+        @include responsive(small-screens) {
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: space-around;
+          margin: 0 1% 0 -1.5%;
+
+        }
+
+        @include responsive(smaller-screens) {
+          justify-content: flex-start;
+          width: 103%;
+          margin: 0 -.3% 0 -1%;
+        }
 
         & a {
           border: solid $dark 3px;
+
+          @include responsive(small-screens) {
+            width: 30%;
+          }
+
+          @include responsive(smaller-screens) {
+           width: 23%;
+          }
 
           & img {
             max-width: 100%;
@@ -414,9 +440,18 @@ footer {
     }
   }
 
-
 #feature img {
   max-width: 100%;
+
+  @include responsive(small-screens) {
+    max-width: 98%;
+  }
+
+  @include responsive(smaller-screens) {
+    max-width: 100%;
+  }
+
+
 }
 
 // class styles, psuedo-classes
