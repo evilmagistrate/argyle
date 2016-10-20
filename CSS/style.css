@@ -98,7 +98,8 @@ body {
 div#wrapper {
   height: 100%;
   max-width: 100%;
-  margin-left: 4%; }
+  margin-left: 4%;
+  margin-bottom: 4%; }
   @media only screen and (max-width: 1366px) {
     div#wrapper {
       margin: 2% 4% 4% 4%; } }
@@ -139,13 +140,6 @@ div#wrapper {
   max-width: 100%; }
 
 footer {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   background-color: #282828;
   z-index: 1;
   width: 100%;
@@ -154,27 +148,43 @@ footer {
   height: 3em; }
   @media only screen and (max-width: 736px) {
     footer {
-      position: static;
-      height: 2em; } }
+      position: static; } }
 
 #top_button {
   font-family: Amiko, Arial, sans-serif;
   font-weight: 600;
   color: #ffffff;
-  padding: 1% 0 0 5%;
+  padding: 1% 0 0 1%;
   font-size: .8em;
-  text-decoration: none; }
+  text-decoration: none;
+  float: left;
+  clear: both; }
+  @media only screen and (max-width: 736px) {
+    #top_button {
+      font-size: .6em;
+      padding: 0 0 2% 1%; } }
+  @media only screen and (max-width: 567px) {
+    #top_button {
+      font-size: .6em;
+      padding: 0 0 2% 3%; } }
+  @media only screen and (max-width: 320px) {
+    #top_button {
+      font-size: .6em;
+      padding: 2% 0 2% 5%; } }
 
 #copyright {
   font-family: Amiko, Arial, sans-serif;
   font-weight: 400;
   color: #ffffff;
-  padding: 1% 9% 2% 0;
+  padding: 1% 0 2% 10%;
   font-size: .8em; }
   @media only screen and (max-width: 736px) {
     #copyright {
       font-size: .6em;
-      padding: 1% 5% 2% 0; } }
+      padding: 1% 0 2% 28%; } }
+  @media only screen and (max-width: 567px) {
+    #copyright {
+      padding: 2% 0 2% 25%; } }
 
 #spotlight {
   max-width: 1330px;
@@ -316,5 +326,8 @@ a.emBiggen img:hover {
 
 a.thumbFeature {
   opacity: .5; }
+
+.featuredShowcard {
+  opacity: .7; }
 
 /*# sourceMappingURL=style.css.map */

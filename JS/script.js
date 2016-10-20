@@ -2,8 +2,7 @@
 $(document).ready(function(){
 
     $('nav a span').hide();
-    $('#portfolio_link span').show();
-
+    $('#portfolio_link > span').show();
 
 //toggle current nav item
 
@@ -13,6 +12,26 @@ $(document).ready(function(){
 
         $(this).children('span').show();
         $(this).siblings().children('span').hide();
+
+        function navLoader(page) {
+            location.href = page;
+        }
+
+        if ($(this).attr('id') == 'portfolio_link') {
+
+            navLoader ('index.html');
+        }
+
+        if ($(this).attr('id') == 'contact_link') {
+
+            var wrapper = $('#wrapper');
+
+            $('#contact_link > span').show();
+            $('#spotlight').remove();
+            $('#portfolio_gallery').remove();
+            wrapper.load('contact.html #contactWrapper').hide().fadeIn('slow');
+
+        }
 
     });
 
@@ -36,6 +55,9 @@ $(document).ready(function(){
 
         spotlight.children().remove();
         spotlight.load('gallery.html #' + showcardID).hide().fadeIn('slow');
+
+        $(this).addClass('featuredShowcard');
+        $(this).siblings().removeClass('featuredShowcard');
 
         $('html, body').animate({ scrollTop: 0 }, 'fast');
 
@@ -116,6 +138,8 @@ $(document).ready(function(){
         }
 
         });
+
+
 
 //darkens images on hover
 
