@@ -295,7 +295,6 @@ div#wrapper {
 
 footer {
 
-
   background-color: $dark;
   z-index: 1;
   width: 100%;
@@ -394,6 +393,10 @@ footer {
     height: 100%;
     overflow: scroll;
 
+    @include responsive(wide-screens) {
+     width: 30%;
+    }
+
     @include responsive(small-screens) {
       width: 40%;
     }
@@ -419,6 +422,11 @@ footer {
     & div.imageWrapper {
 
       max-width: 79%;
+
+
+      @include responsive(wide-screens) {
+        width: 69%;
+      }
 
       @include responsive(small-screens) {
         max-width: 60%;
@@ -519,10 +527,14 @@ footer {
   border-bottom-left-radius: 10px ;
   padding-left: 1%;
   left: 76%;
+
+  @include responsive(wide-screens) {
+    left: 66%;
+  }
 }
 
 .imagePrevious, .imageNext {
-  @include responsive(small-screens) {
+  @include responsive(medium-screens) {
     visibility: hidden;
   }
 }

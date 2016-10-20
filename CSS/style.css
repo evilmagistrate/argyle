@@ -211,6 +211,9 @@ footer {
     color: #727f8f;
     height: 100%;
     overflow: scroll; }
+    @media only screen and (max-width: 1366px) {
+      #spotlight .projectDescription {
+        width: 30%; } }
     @media only screen and (max-width: 736px) {
       #spotlight .projectDescription {
         width: 40%; } }
@@ -228,6 +231,9 @@ footer {
     text-transform: uppercase; }
   #spotlight div.imageWrapper {
     max-width: 79%; }
+    @media only screen and (max-width: 1366px) {
+      #spotlight div.imageWrapper {
+        width: 69%; } }
     @media only screen and (max-width: 736px) {
       #spotlight div.imageWrapper {
         max-width: 60%; } }
@@ -305,8 +311,11 @@ footer {
   border-bottom-left-radius: 10px;
   padding-left: 1%;
   left: 76%; }
+  @media only screen and (max-width: 1366px) {
+    .imageNext {
+      left: 66%; } }
 
-@media only screen and (max-width: 736px) {
+@media only screen and (max-width: 1024px) {
   .imagePrevious, .imageNext {
     visibility: hidden; } }
 
