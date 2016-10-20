@@ -98,11 +98,10 @@ body {
 div#wrapper {
   height: 100%;
   max-width: 100%;
-  margin-left: 4%;
-  margin-bottom: 4%; }
+  margin: 0 0 4% 4%; }
   @media only screen and (max-width: 1366px) {
     div#wrapper {
-      margin: 2% 4% 4% 4%; } }
+      margin: 2% 0 4% 4%; } }
   @media only screen and (max-width: 567px) {
     div#wrapper {
       margin: 2% 4% 4% 4%; } }
@@ -122,11 +121,11 @@ div#wrapper {
 
 .showcard {
   float: left;
-  margin: 1%; }
+  margin: 1% 1% 1% 1%; }
   @media only screen and (max-width: 1366px) {
     .showcard {
-      max-width: 100%;
-      width: 46%; } }
+      width: 46%;
+      margin: 1% 1% 1% 1%; } }
   @media only screen and (max-width: 1024px) {
     .showcard {
       width: 46%; } }
@@ -148,6 +147,7 @@ footer {
   height: 3em; }
   @media only screen and (max-width: 736px) {
     footer {
+      width: 95%;
       position: static; } }
 
 #top_button {
@@ -162,7 +162,7 @@ footer {
   @media only screen and (max-width: 736px) {
     #top_button {
       font-size: .6em;
-      padding: 0 0 2% 1%; } }
+      padding: 1% 0 2% 1%; } }
   @media only screen and (max-width: 567px) {
     #top_button {
       font-size: .6em;
@@ -177,14 +177,13 @@ footer {
   font-weight: 400;
   color: #ffffff;
   padding: 1% 0 2% 10%;
-  font-size: .8em; }
+  margin-right: 9%;
+  font-size: .8em;
+  float: right; }
   @media only screen and (max-width: 736px) {
     #copyright {
       font-size: .6em;
-      padding: 1% 0 2% 28%; } }
-  @media only screen and (max-width: 567px) {
-    #copyright {
-      padding: 2% 0 2% 25%; } }
+      margin-right: 0; } }
 
 #spotlight {
   max-width: 1330px;
@@ -195,7 +194,7 @@ footer {
       max-width: 94%; } }
   @media only screen and (max-width: 736px) {
     #spotlight {
-      max-width: 100%;
+      max-width: 98%;
       margin: 2% 2% 1% 2%; } }
   @media only screen and (max-width: 320px) {
     #spotlight {
@@ -216,13 +215,20 @@ footer {
         width: 30%; } }
     @media only screen and (max-width: 736px) {
       #spotlight .projectDescription {
-        width: 40%; } }
+        position: relative;
+        width: 98%;
+        height: auto;
+        margin: 2% 0 2% -.5%; } }
     @media only screen and (max-width: 567px) {
       #spotlight .projectDescription {
         position: relative;
         width: 100%;
         height: auto;
         margin: 2% 0 2% 0; } }
+    @media only screen and (max-width: 320px) {
+      #spotlight .projectDescription {
+        width: 102%;
+        margin: 2% -1% 2% 0; } }
   #spotlight p {
     margin: 0 5% 5% 5%; }
   #spotlight h3 {
@@ -236,7 +242,10 @@ footer {
         width: 69%; } }
     @media only screen and (max-width: 736px) {
       #spotlight div.imageWrapper {
-        max-width: 60%; } }
+        max-width: 100%;
+        width: 98%;
+        float: left;
+        clear: both; } }
     @media only screen and (max-width: 567px) {
       #spotlight div.imageWrapper {
         max-width: 100%;
@@ -256,8 +265,8 @@ footer {
         #spotlight div.imageWrapper .thumbnailSlider {
           flex-wrap: wrap;
           flex-direction: row;
-          justify-content: space-around;
-          margin: 0 1% 0 -1.5%; } }
+          justify-content: flex-start;
+          margin: 0 1% 0 -1%; } }
       @media only screen and (max-width: 567px) {
         #spotlight div.imageWrapper .thumbnailSlider {
           justify-content: flex-start;
@@ -267,7 +276,7 @@ footer {
         border: solid #282828 3px; }
         @media only screen and (max-width: 736px) {
           #spotlight div.imageWrapper .thumbnailSlider a {
-            width: 30%; } }
+            width: 18%; } }
         @media only screen and (max-width: 567px) {
           #spotlight div.imageWrapper .thumbnailSlider a {
             width: 23%; } }
@@ -287,6 +296,9 @@ footer {
   @media only screen and (max-width: 567px) {
     .feature img {
       max-width: 100%; } }
+  @media only screen and (max-width: 320px) {
+    .feature img {
+      max-width: 102%; } }
 
 .imagePrevious, .imageNext {
   position: absolute;
@@ -296,10 +308,11 @@ footer {
   font-family: Amiko, Arial, sans-serif;
   color: #ffffff;
   background-color: #282828;
+  background-color: rgba(40, 40, 40, 0.6);
   padding: .75% .5% 0 .5%; }
   .imagePrevious:hover, .imageNext:hover {
     cursor: pointer;
-    color: #727f8f; }
+    background-color: #282828; }
 
 .imagePrevious {
   border-top-right-radius: 10px;
@@ -318,6 +331,24 @@ footer {
 @media only screen and (max-width: 1024px) {
   .imagePrevious, .imageNext {
     visibility: hidden; } }
+
+.imagePrevious.vertical, .imageNext.vertical {
+  position: absolute;
+  top: 38%; }
+
+.imagePrevious.vertical {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-right: 1%; }
+
+.imageNext.vertical {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 1%;
+  left: 76%; }
+  @media only screen and (max-width: 1366px) {
+    .imageNext.vertical {
+      left: 66%; } }
 
 #banner nav a:hover {
   color: #727f8f; }

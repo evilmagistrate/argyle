@@ -30,7 +30,6 @@ $(document).ready(function(){
             $('#spotlight').remove();
             $('#portfolio_gallery').remove();
             wrapper.load('contact.html #contactWrapper').hide().fadeIn('slow');
-
         }
 
     });
@@ -83,11 +82,13 @@ $(document).ready(function(){
         }
 
 
-
 //previous and next buttons for image sldeshow
 
         $('.imageNext').on('click', getNext);
         $('.imagePrevious').on('click', getPrev);
+
+
+        //keydown left and right
 
         $(document).keydown(function(e){
             if (e.keyCode == 37) {
@@ -99,6 +100,16 @@ $(document).ready(function(){
             if (e.keyCode == 39) {
                 getNext();
             }
+        });
+
+        //mobile swipe left and right
+
+        $('.feature').on('swipeleft',function(){
+            getNext()
+        });
+
+        $('.feature').on('swiperight',function(){
+            getPrev()
         });
 
         function getNext() {
