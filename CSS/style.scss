@@ -471,6 +471,7 @@ footer {
 
         & a {
           border: solid $dark 3px;
+          max-width: 25%;
 
           @include responsive(small-screens) {
             width: 18%;
@@ -595,6 +596,12 @@ a.emBiggen img:hover {
   transition: all .5s  ease;
   border-top: solid 6px $lessdark;
   margin-bottom: -6px;
+
+  @include responsive($width-medium) {
+    border-top: none;
+    margin-bottom: 0;
+  }
+
 }
 
 a.thumbFeature {
