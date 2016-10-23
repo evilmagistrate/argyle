@@ -389,6 +389,7 @@ footer {
     width: 20%;
     margin: 0 0 0 2%;
     background-color: $bright;
+    font-weight: 400;
     color: $lessdark;
     height: 100%;
     overflow: scroll;
@@ -418,7 +419,7 @@ footer {
   }
 
   p {
-      margin: 0 5% 5% 5%;
+      margin: 0 5% 12.5% 5%;
     }
 
   h3 {
@@ -426,6 +427,37 @@ footer {
     font-family: $font-sans;
     text-transform: uppercase;
   }
+
+  & .projectNav {
+
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: $bright;
+
+    & a {
+      margin: 0 8% 5% 8%;
+      font-family: $font-sans;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: .75em;
+      color: $lessdark;
+
+      @include responsive(small-screens) {
+        margin: 0 3.75% 2% 3.75%;
+      }
+    }
+
+    & .projectNext {
+      float: right;
+    }
+
+    @include responsive(small-screens) {
+      visibility: visible;
+    }
+  }
+
 
     & div.imageWrapper {
 

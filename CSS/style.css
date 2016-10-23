@@ -207,6 +207,7 @@ footer {
     width: 20%;
     margin: 0 0 0 2%;
     background-color: #ffffff;
+    font-weight: 400;
     color: #727f8f;
     height: 100%;
     overflow: scroll; }
@@ -230,11 +231,32 @@ footer {
         width: 102%;
         margin: 2% -1% 2% 0; } }
   #spotlight p {
-    margin: 0 5% 5% 5%; }
+    margin: 0 5% 12.5% 5%; }
   #spotlight h3 {
     margin: 5% 5% 0 5%;
     font-family: Amiko, Arial, sans-serif;
     text-transform: uppercase; }
+  #spotlight .projectNav {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff; }
+    #spotlight .projectNav a {
+      margin: 0 8% 5% 8%;
+      font-family: Amiko, Arial, sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: .75em;
+      color: #727f8f; }
+      @media only screen and (max-width: 736px) {
+        #spotlight .projectNav a {
+          margin: 0 3.75% 2% 3.75%; } }
+    #spotlight .projectNav .projectNext {
+      float: right; }
+    @media only screen and (max-width: 736px) {
+      #spotlight .projectNav {
+        visibility: visible; } }
   #spotlight div.imageWrapper {
     max-width: 79%; }
     @media only screen and (max-width: 1366px) {
