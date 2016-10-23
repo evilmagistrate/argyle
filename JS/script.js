@@ -62,6 +62,7 @@ $(document).ready(function(){
 
     });
 
+//after ajax is complete
 
     $(document).ajaxComplete(function () {
 
@@ -201,6 +202,15 @@ $(document).ready(function(){
 
         }
 
+
+//shroud
+
+        var first = "qwerty";
+        var last = "ralph";
+        var hostname = "gmail.com";
+        var linktext = first + "&#46;" + last + "@" + hostname;
+
+        $('#contactMe').append("<a href='" + "mail" + "to&#58;" + first + "&#46;" + last + "&#64;" + hostname + "'>" + linktext + "</a>");
 
     });
 

@@ -426,6 +426,7 @@ footer {
     margin: 5% 5% 0 5%;
     font-family: $font-sans;
     text-transform: uppercase;
+    line-height: 110%;
   }
 
   & .projectNav {
@@ -609,6 +610,31 @@ footer {
   @include responsive(wide-screens) {
     left: 66%;
   }
+}
+
+//contact page
+
+#contactMe a {
+  font-family: $font-sans;
+  text-decoration: none;
+  color: $lessdark;
+  margin-left: 1%;
+
+  @include responsive(smaller-screens) {
+    margin-left: 2.5%;
+  }
+
+  @include responsive(tiny-screens) {
+    margin-left: 8%;
+  }
+
+  &::selection {
+    background: $bright;
+  }
+  &::-moz-selection {
+    background: $bright;
+  }
+
 }
 
 // class styles, psuedo-classes
