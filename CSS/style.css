@@ -208,6 +208,7 @@ footer {
     margin: 0 0 0 2%;
     background-color: #ffffff;
     font-weight: 400;
+    font-size: 1.25em;
     color: #727f8f;
     height: 100%;
     overflow: scroll; }
@@ -230,10 +231,15 @@ footer {
       #spotlight .projectDescription {
         width: 102%;
         margin: 2% -1% 2% 0; } }
-  #spotlight p {
-    margin: 0 5% 12.5% 5%; }
+  #spotlight .projectCopy {
+    margin: 0 5% 20% 5%; }
   #spotlight h3 {
     margin: 5% 5% 0 5%;
+    font-family: Amiko, Arial, sans-serif;
+    text-transform: uppercase;
+    line-height: 110%; }
+  #spotlight h5 {
+    margin: 0 5% 0 5%;
     font-family: Amiko, Arial, sans-serif;
     text-transform: uppercase;
     line-height: 110%; }

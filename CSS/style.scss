@@ -390,6 +390,7 @@ footer {
     margin: 0 0 0 2%;
     background-color: $bright;
     font-weight: 400;
+    font-size: 1.25em;
     color: $lessdark;
     height: 100%;
     overflow: scroll;
@@ -418,8 +419,8 @@ footer {
     }
   }
 
-  p {
-      margin: 0 5% 12.5% 5%;
+  .projectCopy {
+      margin: 0 5% 20% 5%;
     }
 
   h3 {
@@ -427,6 +428,14 @@ footer {
     font-family: $font-sans;
     text-transform: uppercase;
     line-height: 110%;
+  }
+
+  h5 {
+    margin: 0 5% 0 5%;
+    font-family: $font-sans;
+    text-transform: uppercase;
+    line-height: 110%;
+
   }
 
   & .projectNav {
