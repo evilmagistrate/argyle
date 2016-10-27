@@ -24,7 +24,7 @@ body {
   #banner header {
     position: relative; }
   #banner #logo {
-    font-size: 5.4em;
+    font-size: 4.5em;
     height: 1em; }
   #banner nav {
     font-size: 1.2em;
@@ -49,24 +49,24 @@ body {
     #banner {
       width: 600px; }
       #banner #logo {
-        font-size: 4.75em; } }
+        font-size: 3.9em; } }
   @media only screen and (max-width: 1024px) {
     #banner {
       margin: 4% 0 0 4.6%;
       width: 440px; }
       #banner #logo {
-        font-size: 3.35em;
+        font-size: 2.8em;
         line-height: 1em; }
       #banner nav {
         margin-top: -.25em;
         margin-left: .1em;
-        margin-right: 7.5%; } }
+        margin-right: 7%; } }
   @media only screen and (max-width: 736px) {
     #banner {
       margin: 2% 0 0 4.2%;
       width: 334px; }
       #banner #logo {
-        font-size: 2.5em;
+        font-size: 2.1em;
         line-height: 1em;
         margin-left: .1em;
         margin-right: 0; }
@@ -79,17 +79,17 @@ body {
       max-width: 100%;
       justify-content: flex-start; }
       #banner #logo {
-        font-size: 2.6em;
+        font-size: 2.2em;
         line-height: 1em; }
       #banner nav {
         text-align: right;
         margin-top: -1%;
-        margin-right: 5%; }
+        margin-right: 2%; }
       #banner #contact_link {
         position: static; } }
   @media only screen and (max-width: 320px) {
     #banner #logo {
-      font-size: 2.2em; }
+      font-size: 1.8em; }
     #banner nav {
       font-size: 1em;
       text-align: right;

@@ -3,7 +3,7 @@
 $(document).ready(function(){
 
     $('nav a span').hide();
-    $('#portfolio_link > span').show();
+    $('#portfolio_link > span').hide().fadeIn('slow');
 
 
 //toggle current nav item
@@ -13,7 +13,7 @@ $(document).ready(function(){
 
         event.preventDefault();
 
-        $(this).children('span').show();
+        $(this).children('span').hide().fadeIn('slow');
         $(this).siblings().children('span').hide();
 
         function navLoader(page) {
