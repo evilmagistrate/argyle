@@ -95,7 +95,7 @@ body {
 
   & #logo {
     font: {
-      size: 4.5em;
+      size: 5.4em;
     }
     height: 1em;
   }
@@ -134,7 +134,7 @@ body {
 
     & #logo {
       font: {
-        size: 3.9em;
+        size: 4.75em;
       }
     }
   }
@@ -147,7 +147,7 @@ body {
     & #logo {
 
       font: {
-        size: 2.8em;
+        size: 3.35em;
       }
 
       line-height: 1em;
@@ -156,7 +156,7 @@ body {
     & nav {
       margin-top: -.25em;
       margin-left: .1em;
-      margin-right: 7%;
+      margin-right: 7.5%;
 
     }
 
@@ -169,7 +169,7 @@ body {
     & #logo {
 
       font: {
-        size: 2.1em;
+        size: 2.5em;
       }
 
       line-height: 1em;
@@ -195,7 +195,7 @@ body {
 
     & #logo {
       font: {
-        size: 2.2em;
+        size: 2.6em;
       }
       line-height: 1em;
     }
@@ -203,7 +203,7 @@ body {
     & nav {
       text-align: right;
       margin-top: -1%;
-      margin-right: 2%;
+      margin-right: 5%;
     }
 
     & #contact_link {
@@ -215,7 +215,7 @@ body {
 
     & #logo {
       font: {
-        size: 1.8em;
+        size: 2.2em;
       }
     }
     & nav {
@@ -229,9 +229,10 @@ body {
 
 // wrapper
 
-div#wrapper {
-  height: 100%;
+#wrapper {
   max-width: 100%;
+  height: auto;
+
   margin: 0 0 4% 4%;
 
   @include responsive(wide-screens) {
@@ -253,6 +254,7 @@ div#wrapper {
 
   z-index: 2;
   max-width: 100%;
+  height: 100%;
 
   @include responsive(smaller-screens) {
     max-width: 96%;
@@ -261,13 +263,13 @@ div#wrapper {
   @include responsive(tiny-screens) {
     max-width: 100%;
   }
+
 }
 
 .showcard {
 
   float: left;
   margin: 1% 1% 1% 1%;
-
 
   @include responsive(wide-screens) {
     width: 46%;
@@ -297,17 +299,26 @@ div#wrapper {
 footer {
 
   background-color: $dark;
-  z-index: 1;
-  width: 100%;
+  z-index: 2;
   position: fixed;
   bottom: 0;
+  width: 100%;
   height: 3em;
 
-  @include responsive(small-screens) {
-    width: 95%;
-    position: static;
+  @include flex-box;
+  align-items: center;
+
+  @include responsive(width-screens) {
+    justify-content: space-between;
+    max-width: 1366px;
+    height: 1.6em;
   }
 
+  @include responsive(medium-screens) {
+    position: static;
+    justify-content: space-between;
+    height: 1.6em;
+  }
 }
 
 #top_button {
@@ -318,26 +329,18 @@ footer {
 
   font-weight: 600;
   color: $bright;
-  padding: 1% 0 0 1%;
+  padding: 0 0 0 1%;
   font-size: .8em;
   text-decoration: none;
 
-  float: left;
-  clear: both;
 
   @include responsive(small-screens) {
     font-size: .6em;
-    padding: 1% 0 2% 1%;
-  }
-
-  @include responsive(smaller-screens) {
-    font-size: .6em;
-    padding: 0 0 2% 3%;
+    padding: 0 0 0 1%;
   }
 
   @include responsive(tiny-screens) {
-    font-size: .6em;
-    padding: 2% 0 2% 5%;
+    padding-left: 5%;
   }
 }
 
@@ -345,18 +348,21 @@ footer {
 
   font: {
     family: $font-sans;
+    weight: 400;
+    size: .8em;
   }
-  font-weight: 400;
   color: $bright;
-  padding: 1% 0 2% 10%;
-  margin-right: 9%;
-  font-size: .8em;
-  float: right;
+  padding-left: 5%;
 
-  @include responsive(small-screens) {
-    font-size: .6em;
-    margin-right: 0;
+  @include responsive(medium-screens) {
+    margin-right: 5%;
   }
+
+  @include responsive(smaller-screens) {
+    font-size: .6em;
+    margin-right: 2%;
+  }
+
 }
 
 
@@ -420,7 +426,8 @@ footer {
   }
 
   .projectCopy {
-      margin: 0 5% 20% 5%;
+    margin: 0 5% 20% 5%;
+    vertical-align: bottom;
     }
 
   h3 {
@@ -623,11 +630,52 @@ footer {
 
 //contact page
 
+#contactWrapper {
+  margin: 6% 0 0 0;
+  max-width: 565px;
+  background-color: $bright;
+  color: $lessdark;
+  padding: 2% 4% 2% 2%;
+  font-weight: 400;
+
+  @include responsive(wide-screens) {
+    max-width: 505px;
+  }
+
+  @include responsive(medium-screens) {
+    margin: 8% 0 10% 0;
+    padding: 2% 5% 2% 5%;
+    max-width: 100%;
+  }
+
+  @include responsive(small-screens) {
+    padding: 2% 4% 2% 4%;
+    margin: 4% 0 10% -1%;
+    max-width: 90%;
+  }
+
+  @include responsive(smaller-screens) {
+    padding: 2% 5% 2% 5%;
+    margin: 8% 0 10% 0;
+    max-width: 100%;
+  }
+
+  @include responsive(tiny-screens) {
+    padding: 2% 5% 2% 5%;
+    max-width: 100%;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-family: $font-sans;
+  }
+
+}
+
 #contactMe a {
   font-family: $font-sans;
   text-decoration: none;
   color: $lessdark;
-  margin-left: 1%;
 
   @include responsive(smaller-screens) {
     margin-left: 2.5%;

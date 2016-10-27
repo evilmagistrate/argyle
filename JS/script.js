@@ -1,10 +1,13 @@
 
+
 $(document).ready(function(){
 
     $('nav a span').hide();
     $('#portfolio_link > span').show();
 
+
 //toggle current nav item
+
 
     $('nav a').on('click', function () {
 
@@ -24,12 +27,11 @@ $(document).ready(function(){
 
         if ($(this).attr('id') == 'contact_link') {
 
-            var wrapper = $('#wrapper');
+            var spotlight = $('#spotlight');
 
             $('#contact_link > span').show();
-            $('#spotlight').remove();
             $('#portfolio_gallery').remove();
-            wrapper.load('contact.html #contactWrapper').hide().fadeIn('slow');
+            spotlight.load('contact.html #contactWrapper').hide().fadeIn('slow');
         }
 
     });
@@ -38,7 +40,7 @@ $(document).ready(function(){
 
 
     $('#top_button').click(function() {
-        $('html, body').animate({ scrollTop: 0 }, 'fast');
+        $('html, body').animate({ scrollTop: 0 }, 500);
     });
 
 
@@ -62,11 +64,15 @@ $(document).ready(function(){
 
     });
 
+
 //after ajax is complete
+
 
     $(document).ajaxComplete(function () {
 
+
 //inserting active thumnbail into feature
+
 
         $('#spotlight').on('click', '.emBiggen', inukChuk);
 
@@ -78,18 +84,24 @@ $(document).ready(function(){
             $(this).siblings().removeClass('thumbFeature');
 
             var imgSrc = $(this).children().attr('src').replace('-th', '');
+            var imgAlt = $(this).children().attr('alt');
 
-            $('.feature').children().attr('src', imgSrc);
+            $('.feature > img').attr({
+                src: imgSrc,
+                alt: imgAlt
+            });
         }
 
 
 //previous and next buttons for image sldeshow
 
+
         $('.imageNext').on('click', getNext);
         $('.imagePrevious').on('click', getPrev);
 
 
-        //keydown left and right
+//keydown left and right
+
 
         $(document).keydown(function(e){
             if (e.keyCode == 37) {
@@ -103,7 +115,9 @@ $(document).ready(function(){
             }
         });
 
-        //mobile swipe left and right
+
+//mobile swipe left and right
+
 
         $('.feature').on('swipeleft',function(){
             getNext()
@@ -122,9 +136,13 @@ $(document).ready(function(){
             }
 
             var nextNewURL = nextNew.children().attr('src').replace('-th','');
+            var imgAlt = nextNew.children().attr('alt');
 
-            $('.feature').children().attr('src', nextNewURL);
 
+            $('.feature > img').attr({
+                src: nextNewURL,
+                alt: imgAlt
+            });
 
             $(nextNew).addClass('thumbFeature');
             $(nextNew).siblings().removeClass('thumbFeature');
@@ -140,9 +158,13 @@ $(document).ready(function(){
             }
 
             var nextPrevURL = nextPrev.children().attr('src').replace('-th','');
+            var imgAlt = nextPrev.children().attr('alt');
 
-            $('.feature').children().attr('src', nextPrevURL);
 
+            $('.feature > img').attr({
+                src: nextPrevURL,
+                alt: imgAlt
+            });
 
             $(nextPrev).addClass('thumbFeature');
             $(nextPrev).siblings().removeClass('thumbFeature');
@@ -150,7 +172,7 @@ $(document).ready(function(){
         }
 
 
-        //previous and next buttons for projects
+//previous and next buttons for projects
 
 
         $('.projectNext').on('click', getNextProject);
@@ -205,13 +227,19 @@ $(document).ready(function(){
 
 //shroud
 
+
         var first = "qwerty";
         var last = "ralph";
         var hostname = "gmail.com";
-        var linktext = first + "&#46;" + last + "@" + hostname;
+        var linktext = first + "&#46;" + last + "&#64;" + hostname;
 
-        $('#contactMe').append("<a href='" + "mail" + "to&#58;" + first + "&#46;" + last + "&#64;" + hostname + "'>" + linktext + "</a>");
+        $('#contactMe').append(linktext);
+        //$('#contactMe').append("<a href='" + "mail" + "to&#58;" + first + "&#46;" + last + "[at]" + hostname + "'>" + linktext + "</a>");
 
+    });
+
+    $(document).ajaxError(function() {
+        $( "#spotlight" ).append( "<h2>An unexpected error occured and the content was not loaded, sorry about that. Please try again!</h2>" );
     });
 
 });
