@@ -223,6 +223,12 @@ footer {
         width: 98%;
         height: auto;
         margin: 2% 0 2% -.5%; } }
+    @media only screen and (max-width: 736px) {
+      #spotlight .projectDescription {
+        position: relative;
+        width: 98%;
+        height: auto;
+        margin: 2% 0 2% -.5%; } }
     @media only screen and (max-width: 567px) {
       #spotlight .projectDescription {
         position: relative;
