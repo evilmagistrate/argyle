@@ -4,6 +4,7 @@
 $dark: #282828;
 $lessdark: #727f8f;
 $bright: #ffffff;
+$lessbright: #bfbfbf;
 
 $font-serif: Rokkitt, "Palatino Linotype", "Book Antiqua", Palatino, serif;
 $font-sans: Amiko, Arial, sans-serif;
@@ -395,15 +396,15 @@ footer {
     right: 0;
     width: 20%;
     margin: 0 0 0 2%;
-    background-color: $bright;
+    //background-color: $bright;
     font-weight: 400;
     font-size: 1 em;
-    color: $lessdark;
+    color: $lessbright;
     height: 100%;
     overflow: scroll;
 
     @include responsive(wide-screens) {
-     width: 30%;
+     width: 30%
     }
 
     @include responsive(small-screens) {
@@ -432,7 +433,7 @@ footer {
     }
 
   h3 {
-    margin: 5% 5% 0 5%;
+    margin: 0% 5% 0 5%;
     font-family: $font-sans;
     text-transform: uppercase;
     line-height: 110%;
@@ -452,7 +453,7 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: $bright;
+    //background-color: $bright;
 
     & a {
       margin: 0 8% 5% 8%;
@@ -460,7 +461,7 @@ footer {
       text-transform: uppercase;
       text-decoration: none;
       font-size: .75em;
-      color: $lessdark;
+      color: $bright;
 
       @include responsive(small-screens) {
         margin: 0 3.75% 2% 3.75%;
@@ -579,6 +580,7 @@ footer {
   &:hover {
     cursor: pointer;
     background-color: $dark;
+    color: $lessbright;
   }
 }
 
@@ -635,6 +637,7 @@ footer {
   margin: 6% 0 0 0;
   max-width: 565px;
   background-color: $bright;
+  box-shadow: .5em .5em 1em #000;
   color: $lessdark;
   padding: 2% 4% 2% 2%;
   font-weight: 400;
@@ -725,5 +728,5 @@ a.thumbFeature {
 }
 
 .featuredShowcard {
-  opacity: .7;
+  opacity: .5;
 }

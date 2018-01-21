@@ -208,10 +208,9 @@ footer {
     right: 0;
     width: 20%;
     margin: 0 0 0 2%;
-    background-color: #ffffff;
     font-weight: 400;
     font-size: 1 em;
-    color: #727f8f;
+    color: #bfbfbf;
     height: 100%;
     overflow: scroll; }
     @media only screen and (max-width: 1366px) {
@@ -237,7 +236,7 @@ footer {
     margin: 0 5% 20% 5%;
     vertical-align: bottom; }
   #spotlight h3 {
-    margin: 5% 5% 0 5%;
+    margin: 0% 5% 0 5%;
     font-family: Amiko, Arial, sans-serif;
     text-transform: uppercase;
     line-height: 110%; }
@@ -250,15 +249,14 @@ footer {
     visibility: hidden;
     position: absolute;
     bottom: 0;
-    width: 100%;
-    background-color: #ffffff; }
+    width: 100%; }
     #spotlight .projectNav a {
       margin: 0 8% 5% 8%;
       font-family: Amiko, Arial, sans-serif;
       text-transform: uppercase;
       text-decoration: none;
       font-size: .75em;
-      color: #727f8f; }
+      color: #ffffff; }
       @media only screen and (max-width: 736px) {
         #spotlight .projectNav a {
           margin: 0 3.75% 2% 3.75%; } }
@@ -345,7 +343,8 @@ footer {
   padding: .75% .5% 0 .5%; }
   .imagePrevious:hover, .imageNext:hover {
     cursor: pointer;
-    background-color: #282828; }
+    background-color: #282828;
+    color: #bfbfbf; }
 
 .imagePrevious {
   border-top-right-radius: 10px;
@@ -387,6 +386,7 @@ footer {
   margin: 6% 0 0 0;
   max-width: 565px;
   background-color: #ffffff;
+  box-shadow: .5em .5em 1em #000;
   color: #727f8f;
   padding: 2% 4% 2% 2%;
   font-weight: 400; }
@@ -449,6 +449,6 @@ a.thumbFeature {
   opacity: .5; }
 
 .featuredShowcard {
-  opacity: .7; }
+  opacity: .5; }
 
 /*# sourceMappingURL=style.css.map */
