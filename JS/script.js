@@ -4,7 +4,12 @@ $(document).ready(function(){
 
     $('nav a span').hide();
     $('#portfolio_link > span').hide().fadeIn('slow');
+    $('img').css('opacity',0);
 
+
+    $(window).load(function() {
+        $('img').animate({'opacity':1},800);
+    });
 
 //toggle current nav item
 
