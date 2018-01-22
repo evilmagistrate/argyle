@@ -50,7 +50,7 @@ body {
       width: 600px; }
       #banner #logo {
         font-size: 3.9em; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1280px) {
     #banner {
       margin: 4% 0 0 4.6%;
       width: 440px; }
@@ -127,7 +127,7 @@ body {
     .showcard {
       width: 46%;
       margin: 1% 1% 1% 1%; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1280px) {
     .showcard {
       width: 46%; } }
   @media only screen and (max-width: 567px) {
@@ -152,7 +152,7 @@ footer {
   display: -webkit-flex;
   display: flex;
   align-items: center; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1280px) {
     footer {
       position: static;
       justify-content: space-between;
@@ -179,7 +179,7 @@ footer {
   font-size: .8em;
   color: #ffffff;
   padding-left: 5%; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1280px) {
     #copyright {
       margin-right: 5%; } }
   @media only screen and (max-width: 567px) {
@@ -188,7 +188,7 @@ footer {
       margin-right: 2%; } }
 
 #spotlight {
-  max-width: 1330px;
+  max-width: 1280px;
   margin: 2% 0 1% 1%;
   position: relative; }
   @media only screen and (max-width: 1366px) {
@@ -206,7 +206,7 @@ footer {
     position: absolute;
     top: 0;
     right: 0;
-    width: 30%;
+    width: 20%;
     margin: 0 0 0 2%;
     background-color: #282828;
     font-weight: 400;
@@ -214,6 +214,9 @@ footer {
     color: #bfbfbf;
     height: 100%;
     overflow: scroll; }
+    @media only screen and (max-width: 1280px) {
+      #spotlight .projectDescription {
+        width: 30%; } }
     @media only screen and (max-width: 736px) {
       #spotlight .projectDescription {
         position: relative;
@@ -232,7 +235,9 @@ footer {
         margin: 2% -1% 2% 0; } }
   @media only screen and (max-width: 1366px) {
     #spotlight .narrow {
-      margin: 0 10% 0 0; } }
+      background-color: pink;
+      margin: 0 10% 0 0;
+      width: 30%; } }
   #spotlight .projectCopy {
     margin: 0 5% 20% 5%;
     vertical-align: bottom; }
@@ -361,7 +366,7 @@ footer {
     .imageNext {
       left: 66%; } }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1280px) {
   .imagePrevious, .imageNext {
     visibility: hidden; } }
 
@@ -394,7 +399,7 @@ footer {
   @media only screen and (max-width: 1366px) {
     #contactWrapper {
       max-width: 505px; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1280px) {
     #contactWrapper {
       margin: 8% 0 10% 0;
       padding: 2% 5% 2% 5%;

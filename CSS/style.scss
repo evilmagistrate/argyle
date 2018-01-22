@@ -12,7 +12,7 @@ $font-sans: Amiko, Arial, sans-serif;
 $width-tiny: 320px;
 $width-smaller: 567px;
 $width-small: 736px;
-$width-medium: 1024px;
+$width-medium: 1280px;
 $width-large: 1366px;
 
 
@@ -372,7 +372,7 @@ footer {
 
 #spotlight {
 
-  max-width: 1330px;
+  max-width: 1280px;
   margin: 2% 0 1% 1%;
   position: relative;
 
@@ -394,7 +394,7 @@ footer {
     position: absolute;
     top: 0;
     right: 0;
-    width: 30%;
+    width: 20%;
     margin: 0 0 0 2%;
     background-color: $dark;
     font-weight: 400;
@@ -403,6 +403,9 @@ footer {
     height: 100%;
     overflow: scroll;
 
+    @include responsive(medium-screens) {
+      width: 30%;
+    }
 
     @include responsive(small-screens) {
       position: relative;
@@ -425,8 +428,11 @@ footer {
   }
 
   .narrow {
+
     @include responsive(wide-screens) {
+      background-color: pink;
       margin: 0 10% 0 0;
+      width: 30%;
     }
   }
 
