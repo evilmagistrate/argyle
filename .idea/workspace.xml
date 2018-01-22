@@ -6,10 +6,6 @@
       <change beforePath="$PROJECT_DIR$/CSS/style.css" afterPath="$PROJECT_DIR$/CSS/style.css" />
       <change beforePath="$PROJECT_DIR$/CSS/style.css.map" afterPath="$PROJECT_DIR$/CSS/style.css.map" />
       <change beforePath="$PROJECT_DIR$/CSS/style.scss" afterPath="$PROJECT_DIR$/CSS/style.scss" />
-      <change beforePath="$PROJECT_DIR$/gallery.html" afterPath="$PROJECT_DIR$/gallery.html" />
-      <change beforePath="$PROJECT_DIR$/img/dinner-sequence.jpg" afterPath="$PROJECT_DIR$/img/dinner-sequence.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/gpw-tapestry.jpg" afterPath="$PROJECT_DIR$/img/gpw-tapestry.jpg" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="argyle.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,8 +104,8 @@
           <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CSS/style.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="799">
-                  <caret line="435" column="5" lean-forward="true" selection-start-line="435" selection-start-column="5" selection-end-line="435" selection-end-column="5" />
+                <state relative-caret-position="6000">
+                  <caret line="400" column="20" lean-forward="true" selection-start-line="400" selection-start-column="20" selection-end-line="400" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -298,12 +294,12 @@
       <workItem from="1516555630957" duration="14227000" />
       <workItem from="1516578005042" duration="4171000" />
       <workItem from="1516640822818" duration="45000" />
-      <workItem from="1516640872309" duration="2662000" />
+      <workItem from="1516640872309" duration="3010000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21105000" />
+    <option name="totallyTimeSpent" value="21453000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="879" y="23" width="1501" height="1412" extended-state="0" />
@@ -915,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CSS/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="435" column="5" lean-forward="true" selection-start-line="435" selection-start-column="5" selection-end-line="435" selection-end-column="5" />
+        <state relative-caret-position="6000">
+          <caret line="400" column="20" lean-forward="true" selection-start-line="400" selection-start-column="20" selection-end-line="400" selection-end-column="20" />
           <folding />
         </state>
       </provider>
