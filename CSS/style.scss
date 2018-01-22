@@ -427,41 +427,10 @@ footer {
     }
   }
 
-  .narrow {
-
-    margin: 0 10% 0 0;
-    width: 30%;
-
-    @include responsive(medium-screens) {
-      width: 30%;
-      margin: 0 2% 0 0;
-    }
-
-    @include responsive(small-screens) {
-      position: relative;
-      width: 98%;
-      height: auto;
-      margin: 2% 0 2% -.5%;
-    }
-
-    @include responsive(smaller-screens) {
-      position: relative;
-      width: 100%;
-      height: auto;
-      margin: 2% 0 2% 0;
-    }
-
-    @include responsive(tiny-screens) {
-      width: 102%;
-      margin: 2% -1% 2% 0;
-    }
-
-  }
-
   .projectCopy {
     margin: 0 5% 20% 5%;
     vertical-align: bottom;
-    }
+  }
 
   h3 {
     margin: 5% 5% 0 5%;
@@ -508,6 +477,35 @@ footer {
     }
   }
 
+  .narrow {
+
+    margin: 0 10% 0 0;
+    width: 30%;
+
+    @include responsive(medium-screens) {
+      width: 30%;
+      margin: 0 2% 0 0;
+    }
+
+    @include responsive(small-screens) {
+      position: relative;
+      width: 98%;
+      height: auto;
+      margin: 2% 0 2% -.5%;
+    }
+
+    @include responsive(smaller-screens) {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin: 2% 0 2% 0;
+    }
+
+    @include responsive(tiny-screens) {
+      width: 102%;
+      margin: 2% -1% 2% 0;
+    }
+  }
 
     & div.imageWrapper {
 

@@ -233,29 +233,6 @@ footer {
       #spotlight .projectDescription {
         width: 102%;
         margin: 2% -1% 2% 0; } }
-  #spotlight .narrow {
-    margin: 0 10% 0 0;
-    width: 30%; }
-    @media only screen and (max-width: 1280px) {
-      #spotlight .narrow {
-        width: 30%;
-        margin: 0 2% 0 0; } }
-    @media only screen and (max-width: 736px) {
-      #spotlight .narrow {
-        position: relative;
-        width: 98%;
-        height: auto;
-        margin: 2% 0 2% -.5%; } }
-    @media only screen and (max-width: 567px) {
-      #spotlight .narrow {
-        position: relative;
-        width: 100%;
-        height: auto;
-        margin: 2% 0 2% 0; } }
-    @media only screen and (max-width: 320px) {
-      #spotlight .narrow {
-        width: 102%;
-        margin: 2% -1% 2% 0; } }
   #spotlight .projectCopy {
     margin: 0 5% 20% 5%;
     vertical-align: bottom; }
@@ -289,6 +266,29 @@ footer {
     @media only screen and (max-width: 736px) {
       #spotlight .projectNav {
         visibility: visible; } }
+  #spotlight .narrow {
+    margin: 0 10% 0 0;
+    width: 30%; }
+    @media only screen and (max-width: 1280px) {
+      #spotlight .narrow {
+        width: 30%;
+        margin: 0 2% 0 0; } }
+    @media only screen and (max-width: 736px) {
+      #spotlight .narrow {
+        position: relative;
+        width: 98%;
+        height: auto;
+        margin: 2% 0 2% -.5%; } }
+    @media only screen and (max-width: 567px) {
+      #spotlight .narrow {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 2% 0 2% 0; } }
+    @media only screen and (max-width: 320px) {
+      #spotlight .narrow {
+        width: 102%;
+        margin: 2% -1% 2% 0; } }
   #spotlight div.imageWrapper {
     max-width: 79%; }
     @media only screen and (max-width: 1366px) {
